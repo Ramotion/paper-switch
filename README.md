@@ -1,6 +1,6 @@
 #RAMViralSwitch
 
-Swift subclass of the UISwitch which paints over the parent view with the `onTintColor` when the switch is turned on. Implemented concept from [this Dribble](https://dribbble.com/shots/1749645-Contact-Sync) by [Ramotion](https://dribbble.com/teams/Ramotion).
+Swift subclass of the UISwitch which paints over the parent view with the `onTintColor` when the switch is turned on. Implemented concept from [this Dribbble](https://dribbble.com/shots/1749645-Contact-Sync) by [Ramotion](https://dribbble.com/teams/Ramotion), rebound of [Andrea Mazzini](https://github.com/andreamazz)'s [Viral Switch](https://github.com/andreamazz/ViralSwitch)
 
 
 #Screenshot
