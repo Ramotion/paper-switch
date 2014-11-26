@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C6902741A25F40E0045483D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6902731A25F40E0045483D /* AppDelegate.swift */; };
+		9C6902761A25F40E0045483D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6902751A25F40E0045483D /* ViewController.swift */; };
+		9C69027B1A25F40E0045483D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C69027A1A25F40E0045483D /* Images.xcassets */; };
+		9C69028A1A25F40E0045483D /* ViralSwitchDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6902891A25F40E0045483D /* ViralSwitchDemoTests.swift */; };
+		9C6902951A25F45D0045483D /* RAMViralSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6902941A25F45D0045483D /* RAMViralSwitch.swift */; };
+		9C6902971A25F4C10045483D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6902961A25F4C10045483D /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C6902841A25F40E0045483D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C6902661A25F40E0045483D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C69026D1A25F40E0045483D;
+			remoteInfo = ViralSwitchDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C69026E1A25F40E0045483D /* ViralSwitchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViralSwitchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6902721A25F40E0045483D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6902731A25F40E0045483D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C6902751A25F40E0045483D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C69027A1A25F40E0045483D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9C6902831A25F40E0045483D /* ViralSwitchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViralSwitchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6902881A25F40E0045483D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6902891A25F40E0045483D /* ViralSwitchDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViralSwitchDemoTests.swift; sourceTree = "<group>"; };
+		9C6902941A25F45D0045483D /* RAMViralSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMViralSwitch.swift; sourceTree = "<group>"; };
+		9C6902961A25F4C10045483D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C69026B1A25F40E0045483D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6902801A25F40E0045483D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C6902651A25F40E0045483D = {
+			isa = PBXGroup;
+			children = (
+				9C6902701A25F40E0045483D /* ViralSwitchDemo */,
+				9C6902861A25F40E0045483D /* ViralSwitchDemoTests */,
+				9C69026F1A25F40E0045483D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C69026F1A25F40E0045483D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C69026E1A25F40E0045483D /* ViralSwitchDemo.app */,
+				9C6902831A25F40E0045483D /* ViralSwitchDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C6902701A25F40E0045483D /* ViralSwitchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9C6902931A25F45D0045483D /* ViralSwitch */,
+				9C6902731A25F40E0045483D /* AppDelegate.swift */,
+				9C6902751A25F40E0045483D /* ViewController.swift */,
+				9C6902961A25F4C10045483D /* ViewController.xib */,
+				9C69027A1A25F40E0045483D /* Images.xcassets */,
+				9C6902711A25F40E0045483D /* Supporting Files */,
+			);
+			path = ViralSwitchDemo;
+			sourceTree = "<group>";
+		};
+		9C6902711A25F40E0045483D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C6902721A25F40E0045483D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C6902861A25F40E0045483D /* ViralSwitchDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C6902891A25F40E0045483D /* ViralSwitchDemoTests.swift */,
+				9C6902871A25F40E0045483D /* Supporting Files */,
+			);
+			path = ViralSwitchDemoTests;
+			sourceTree = "<group>";
+		};
+		9C6902871A25F40E0045483D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C6902881A25F40E0045483D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C6902931A25F45D0045483D /* ViralSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				9C6902941A25F45D0045483D /* RAMViralSwitch.swift */,
+			);
+			name = ViralSwitch;
+			path = ../../ViralSwitch;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C69026D1A25F40E0045483D /* ViralSwitchDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C69028D1A25F40E0045483D /* Build configuration list for PBXNativeTarget "ViralSwitchDemo" */;
+			buildPhases = (
+				9C69026A1A25F40E0045483D /* Sources */,
+				9C69026B1A25F40E0045483D /* Frameworks */,
+				9C69026C1A25F40E0045483D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViralSwitchDemo;
+			productName = ViralSwitchDemo;
+			productReference = 9C69026E1A25F40E0045483D /* ViralSwitchDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C6902821A25F40E0045483D /* ViralSwitchDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6902901A25F40E0045483D /* Build configuration list for PBXNativeTarget "ViralSwitchDemoTests" */;
+			buildPhases = (
+				9C69027F1A25F40E0045483D /* Sources */,
+				9C6902801A25F40E0045483D /* Frameworks */,
+				9C6902811A25F40E0045483D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C6902851A25F40E0045483D /* PBXTargetDependency */,
+			);
+			name = ViralSwitchDemoTests;
+			productName = ViralSwitchDemoTests;
+			productReference = 9C6902831A25F40E0045483D /* ViralSwitchDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C6902661A25F40E0045483D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Oleg Oleynichenko";
+				TargetAttributes = {
+					9C69026D1A25F40E0045483D = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					9C6902821A25F40E0045483D = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 9C69026D1A25F40E0045483D;
+					};
+				};
+			};
+			buildConfigurationList = 9C6902691A25F40E0045483D /* Build configuration list for PBXProject "ViralSwitchDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C6902651A25F40E0045483D;
+			productRefGroup = 9C69026F1A25F40E0045483D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C69026D1A25F40E0045483D /* ViralSwitchDemo */,
+				9C6902821A25F40E0045483D /* ViralSwitchDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C69026C1A25F40E0045483D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6902971A25F4C10045483D /* ViewController.xib in Resources */,
+				9C69027B1A25F40E0045483D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6902811A25F40E0045483D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C69026A1A25F40E0045483D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6902761A25F40E0045483D /* ViewController.swift in Sources */,
+				9C6902951A25F45D0045483D /* RAMViralSwitch.swift in Sources */,
+				9C6902741A25F40E0045483D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C69027F1A25F40E0045483D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C69028A1A25F40E0045483D /* ViralSwitchDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C6902851A25F40E0045483D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C69026D1A25F40E0045483D /* ViralSwitchDemo */;
+			targetProxy = 9C6902841A25F40E0045483D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9C69028B1A25F40E0045483D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C69028C1A25F40E0045483D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C69028E1A25F40E0045483D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = ViralSwitchDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9C69028F1A25F40E0045483D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = ViralSwitchDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9C6902911A25F40E0045483D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ViralSwitchDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViralSwitchDemo.app/ViralSwitchDemo";
+			};
+			name = Debug;
+		};
+		9C6902921A25F40E0045483D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ViralSwitchDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViralSwitchDemo.app/ViralSwitchDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C6902691A25F40E0045483D /* Build configuration list for PBXProject "ViralSwitchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C69028B1A25F40E0045483D /* Debug */,
+				9C69028C1A25F40E0045483D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C69028D1A25F40E0045483D /* Build configuration list for PBXNativeTarget "ViralSwitchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C69028E1A25F40E0045483D /* Debug */,
+				9C69028F1A25F40E0045483D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9C6902901A25F40E0045483D /* Build configuration list for PBXNativeTarget "ViralSwitchDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6902911A25F40E0045483D /* Debug */,
+				9C6902921A25F40E0045483D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C6902661A25F40E0045483D /* Project object */;
+}
