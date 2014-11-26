@@ -4,7 +4,7 @@ Swift subclass of the UISwitch which paints over the parent view with the `onTin
 
 
 #Screenshot
-![ViralSwitch](https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/1749645/contact-sync-chat-iphone-app-ui-ramotion.gif)
+![ViralSwitch](https://raw.githubusercontent.com/Ramotion/viral-switch/master/screenshot.gif)
 
 
 ## Requirements
