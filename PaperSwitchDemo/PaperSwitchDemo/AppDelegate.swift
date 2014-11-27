@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  ViralSwitchDemo
+//  PaperSwitchDemo
 //
-//  Created by Oleg Oleynichenko on 26/11/14.
-//  Copyright (c) 2014 Oleg Oleynichenko. All rights reserved.
+//  Created by Ramotion on 26/11/14.
+//  Copyright (c) 2014 Ramotion. All rights reserved.
 //
 
 import UIKit

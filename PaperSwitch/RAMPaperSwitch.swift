@@ -1,14 +1,14 @@
 //
-//  RAContactSyncSwitch.swift
-//  ContactSyncSwitchDemo
+//  RAMPaperSwitch.swift
+//  RAMPaperSwitch
 //
-//  Created by Oleg Oleynichenko on 20/11/14.
-//  Copyright (c) 2014 Oleg Oleynichenko. All rights reserved.
+//  Created by Ramotion on 20/11/14.
+//  Copyright (c) 2014 Ramotion. All rights reserved.
 //
 
 import UIKit
 
-class RAMViralSwitch: UISwitch {
+class RAMPaperSwitch: UISwitch {
     
     var didAnimationStartClosure = {(onAnimation: Bool) -> Void in }
     var didAnimationStopClosure = {(onAnimation: Bool, finished: Bool) -> Void in }

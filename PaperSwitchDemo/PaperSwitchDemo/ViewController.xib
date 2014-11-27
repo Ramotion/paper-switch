@@ -4,15 +4,15 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="ViralSwitchDemo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="PaperSwitchDemo" customModuleProvider="target">
             <connections>
                 <outlet property="allowDiscoveryLabel" destination="N9e-6s-9lQ" id="O8T-MM-aeX"/>
                 <outlet property="connectContactsLabel" destination="ko7-ML-TsC" id="7uf-dW-cN2"/>
+                <outlet property="paperSwitch1" destination="r8u-XF-soy" id="vp3-X5-Jn0"/>
+                <outlet property="paperSwitch2" destination="Lkc-kV-pLw" id="pof-LU-udu"/>
                 <outlet property="phone1ImageView" destination="RW3-kM-1XM" id="63b-nr-nm3"/>
                 <outlet property="phone2ImageView" destination="FUW-Xh-bau" id="c5F-0v-mIC"/>
                 <outlet property="view" destination="iN0-l3-epB" id="eq6-G2-aIK"/>
-                <outlet property="viralSwitch1" destination="r8u-XF-soy" id="RdE-uB-lir"/>
-                <outlet property="viralSwitch2" destination="Lkc-kV-pLw" id="Nne-sK-bOC"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -58,7 +58,7 @@
                                         <constraint firstAttribute="width" constant="23" id="TxM-0R-JP4"/>
                                     </constraints>
                                 </imageView>
-                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r8u-XF-soy" customClass="RAMViralSwitch" customModule="ViralSwitchDemo" customModuleProvider="target">
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r8u-XF-soy" customClass="RAMPaperSwitch" customModule="PaperSwitchDemo" customModuleProvider="target">
                                     <rect key="frame" x="200" y="152" width="51" height="31"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="31" id="B6j-At-6lo"/>
@@ -115,7 +115,7 @@ added to your friends list.</string>
                                         <constraint firstAttribute="width" constant="23" id="cRW-3d-UTv"/>
                                     </constraints>
                                 </imageView>
-                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-kV-pLw" customClass="RAMViralSwitch" customModule="ViralSwitchDemo" customModuleProvider="target">
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-kV-pLw" customClass="RAMPaperSwitch" customModule="PaperSwitchDemo" customModuleProvider="target">
                                     <rect key="frame" x="200" y="152" width="51" height="31"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="31" id="m5s-RP-HIQ"/>

@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  ViralSwitchDemo
+//  PaperSwitchDemo
 //
-//  Created by Oleg Oleynichenko on 26/11/14.
-//  Copyright (c) 2014 Oleg Oleynichenko. All rights reserved.
+//  Created by Ramotion on 26/11/14.
+//  Copyright (c) 2014 Ramotion. All rights reserved.
 //
 
 import UIKit
@@ -12,35 +12,35 @@ class ViewController: UIViewController {
     
     @IBOutlet weak private var connectContactsLabel: UILabel!
     @IBOutlet weak private var phone1ImageView: UIImageView!
-    @IBOutlet weak private var viralSwitch1: RAMViralSwitch!
+    @IBOutlet weak private var paperSwitch1: RAMPaperSwitch!
     
     @IBOutlet weak private var allowDiscoveryLabel: UILabel!
     @IBOutlet weak private var phone2ImageView: UIImageView!
-    @IBOutlet weak private var viralSwitch2: RAMViralSwitch!
+    @IBOutlet weak private var paperSwitch2: RAMPaperSwitch!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.setupViralSwitch()
+        self.setupPaperSwitch()
         
         self.navigationController?.navigationBarHidden = true
     }
     
     
-    private func setupViralSwitch() {
+    private func setupPaperSwitch() {
         
-        self.viralSwitch1.didAnimationStartClosure = {(onAnimation: Bool) in
+        self.paperSwitch1.didAnimationStartClosure = {(onAnimation: Bool) in
             
-            self.animateLabel(self.connectContactsLabel, onAnimation: onAnimation, duration: self.viralSwitch1.duration)
-            self.animateImageView(self.phone1ImageView, onAnimation: onAnimation, duration: self.viralSwitch1.duration)
+            self.animateLabel(self.connectContactsLabel, onAnimation: onAnimation, duration: self.paperSwitch1.duration)
+            self.animateImageView(self.phone1ImageView, onAnimation: onAnimation, duration: self.paperSwitch1.duration)
         }
         
         
-        self.viralSwitch2.didAnimationStartClosure = {(onAnimation: Bool) in
+        self.paperSwitch2.didAnimationStartClosure = {(onAnimation: Bool) in
             
-            self.animateLabel(self.self.allowDiscoveryLabel, onAnimation: onAnimation, duration: self.viralSwitch2.duration)
-            self.animateImageView(self.phone2ImageView, onAnimation: onAnimation, duration: self.viralSwitch2.duration)
+            self.animateLabel(self.self.allowDiscoveryLabel, onAnimation: onAnimation, duration: self.paperSwitch2.duration)
+            self.animateImageView(self.phone2ImageView, onAnimation: onAnimation, duration: self.paperSwitch2.duration)
         }
     }
     

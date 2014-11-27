@@ -1,15 +1,15 @@
 //
-//  ViralSwitchDemoTests.swift
-//  ViralSwitchDemoTests
+//  PaperSwitchDemoTests.swift
+//  PaperSwitchDemoTests
 //
-//  Created by Oleg Oleynichenko on 26/11/14.
-//  Copyright (c) 2014 Oleg Oleynichenko. All rights reserved.
+//  Created by Ramotion on 27/11/14.
+//  Copyright (c) 2014 Ramotion. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class ViralSwitchDemoTests: XCTestCase {
+class PaperSwitchDemoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
