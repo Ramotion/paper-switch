@@ -9,7 +9,7 @@ Swift subclass of the UISwitch which paints over the parent view with the `onTin
 
 ## Requirements
 
-- iOS 7.0+
+- iOS 8.0+
 - Xcode 6.1
 
 
