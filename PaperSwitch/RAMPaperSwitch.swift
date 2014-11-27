@@ -10,11 +10,10 @@ import UIKit
 
 class RAMPaperSwitch: UISwitch {
     
+    @IBInspectable var duration: Double = 0.35
+    
     var didAnimationStartClosure = {(onAnimation: Bool) -> Void in }
     var didAnimationStopClosure = {(onAnimation: Bool, finished: Bool) -> Void in }
-    
-    var duration: CFTimeInterval = 0.35
-    
     
     private var shape: CAShapeLayer! = CAShapeLayer()
     private var radius: CGFloat = 0.0
