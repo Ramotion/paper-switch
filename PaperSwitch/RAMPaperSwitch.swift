@@ -35,11 +35,11 @@ class RAMPaperSwitch: UISwitch {
     
     
     override func layoutSubviews() {
-        let x:CGFloat = max(CGRectGetMidX(self.frame), self.superview!.frame.size.width - CGRectGetMidX(self.frame));
-        let y:CGFloat = max(CGRectGetMidY(self.frame), self.superview!.frame.size.height - CGRectGetMidY(self.frame));
+        let x:CGFloat = max(self.frame.midX, self.superview!.frame.size.width - self.frame.midX);
+        let y:CGFloat = max(self.frame.midY, self.superview!.frame.size.height - self.frame.midY);
         self.radius = sqrt(x*x + y*y);
         
-        self.shape.frame = CGRectMake(CGRectGetMidX(self.frame) - self.radius,  CGRectGetMidY(self.frame) - self.radius, self.radius * 2, self.radius * 2)
+        self.shape.frame = CGRectMake(self.frame.midX - self.radius,  self.frame.midY - self.radius, self.radius * 2, self.radius * 2)
         self.shape.anchorPoint = CGPointMake(0.5, 0.5);
         self.shape.path = UIBezierPath(ovalInRect: CGRectMake(0, 0, self.radius * 2, self.radius * 2)).CGPath
     }
