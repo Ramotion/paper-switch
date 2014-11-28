@@ -44,6 +44,14 @@
                                     <color key="textColor" red="0.1215686275" green="0.71764705880000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN6-JF-GrS" userLabel="Description">
+                                    <rect key="frame" x="43" y="91" width="234" height="29"/>
+                                    <string key="text">All your phone Contacts will be automatically 
+added to your friends list.</string>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                    <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_users1" translatesAutoresizingMaskIntoConstraints="NO" id="3Rh-Hd-zis">
                                     <rect key="frame" x="70" y="140" width="39" height="56"/>
                                     <constraints>
@@ -65,14 +73,6 @@
                                     </constraints>
                                     <color key="onTintColor" red="0.12156862745098039" green="0.71764705882352942" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 </switch>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN6-JF-GrS" userLabel="Description">
-                                    <rect key="frame" x="43" y="91" width="234" height="29"/>
-                                    <string key="text">All your phone Contacts will be automatically 
-added to your friends list.</string>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
-                                    <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -101,18 +101,27 @@ added to your friends list.</string>
                                     <color key="textColor" red="0.12156862745098039" green="0.71764705882352942" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_users2" translatesAutoresizingMaskIntoConstraints="NO" id="VJR-8x-Xe5">
-                                    <rect key="frame" x="101" y="140" width="39" height="56"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on to allow your phone number to be dis-played in your friends’ Contacts." textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG8-M8-B66" userLabel="Description">
+                                    <rect key="frame" x="40" y="91" width="240" height="29"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="56" id="1hw-ej-SMC"/>
-                                        <constraint firstAttribute="width" constant="39" id="vUL-Ad-yFb"/>
+                                        <constraint firstAttribute="width" constant="240" id="TAX-jG-Pfu"/>
                                     </constraints>
-                                </imageView>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                    <color key="textColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_phone_off" translatesAutoresizingMaskIntoConstraints="NO" id="FUW-Xh-bau">
                                     <rect key="frame" x="70" y="150" width="23" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="YcD-Mp-Ids"/>
                                         <constraint firstAttribute="width" constant="23" id="cRW-3d-UTv"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_users2" translatesAutoresizingMaskIntoConstraints="NO" id="VJR-8x-Xe5">
+                                    <rect key="frame" x="101" y="140" width="39" height="56"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="1hw-ej-SMC"/>
+                                        <constraint firstAttribute="width" constant="39" id="vUL-Ad-yFb"/>
                                     </constraints>
                                 </imageView>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-kV-pLw" customClass="RAMPaperSwitch" customModule="PaperSwitchDemo" customModuleProvider="target">
@@ -122,15 +131,6 @@ added to your friends list.</string>
                                     </constraints>
                                     <color key="onTintColor" red="0.55686274509803924" green="0.77647058823529413" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                 </switch>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on to allow your phone number to be dis-played in your friends’ Contacts." textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG8-M8-B66">
-                                    <rect key="frame" x="40" y="91" width="240" height="29"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="240" id="TAX-jG-Pfu"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
-                                    <color key="textColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
