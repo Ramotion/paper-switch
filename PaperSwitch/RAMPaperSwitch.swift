@@ -20,84 +20,84 @@ class RAMPaperSwitch: UISwitch {
     
     
     override func setOn(on: Bool, animated: Bool) {
-        var changed:Bool = on != self.on
+        let changed:Bool = on != self.on
         
         super.setOn(on, animated: animated)
         
         if changed {
             if animated {
-                self.switchChanged(self)
+                switchChanged()
             } else {
-                self.showShape(on)
+                showShapeIfNeed()
             }
         }
     }
     
     
     override func layoutSubviews() {
-        let x:CGFloat = max(self.frame.midX, self.superview!.frame.size.width - self.frame.midX);
-        let y:CGFloat = max(self.frame.midY, self.superview!.frame.size.height - self.frame.midY);
-        self.radius = sqrt(x*x + y*y);
+        let x:CGFloat = max(frame.midX, superview!.frame.size.width - frame.midX);
+        let y:CGFloat = max(frame.midY, superview!.frame.size.height - frame.midY);
+        radius = sqrt(x*x + y*y);
         
-        self.shape.frame = CGRectMake(self.frame.midX - self.radius,  self.frame.midY - self.radius, self.radius * 2, self.radius * 2)
-        self.shape.anchorPoint = CGPointMake(0.5, 0.5);
-        self.shape.path = UIBezierPath(ovalInRect: CGRectMake(0, 0, self.radius * 2, self.radius * 2)).CGPath
+        shape.frame = CGRectMake(frame.midX - radius,  frame.midY - radius, radius * 2, radius * 2)
+        shape.anchorPoint = CGPointMake(0.5, 0.5);
+        shape.path = UIBezierPath(ovalInRect: CGRectMake(0, 0, radius * 2, radius * 2)).CGPath
     }
 
 
     override func awakeFromNib() {        
-        var onTintColor:UIColor? = self.onTintColor
-        if onTintColor == nil {
-            onTintColor = UIColor.greenColor()
+        var shapeColor:UIColor? = onTintColor
+        if shapeColor == nil {
+            shapeColor = UIColor.greenColor()
         }
         
-        self.layer.borderWidth = 0.5
-        self.layer.borderColor = UIColor.whiteColor().CGColor;
-        self.layer.cornerRadius = self.frame.size.height / 2;
+        layer.borderWidth = 0.5
+        layer.borderColor = UIColor.whiteColor().CGColor;
+        layer.cornerRadius = frame.size.height / 2;
         
-        self.shape.fillColor = onTintColor?.CGColor
-        self.shape.masksToBounds = true
+        shape.fillColor = shapeColor?.CGColor
+        shape.masksToBounds = true
         
-        self.superview?.layer.insertSublayer(self.shape, atIndex: 0)
-        self.superview?.layer.masksToBounds = true
+        superview?.layer.insertSublayer(shape, atIndex: 0)
+        superview?.layer.masksToBounds = true
         
-        self.showShape(self.on)
+        showShapeIfNeed()
         
-        self.addTarget(self, action: "switchChanged:", forControlEvents: UIControlEvents.ValueChanged)
+        addTarget(self, action: "switchChanged", forControlEvents: UIControlEvents.ValueChanged)
     }
     
     
-    private func showShape(show: Bool) {
-        self.shape.transform = show ? CATransform3DMakeScale(1.0, 1.0, 1.0) : CATransform3DMakeScale(0.0001, 0.0001, 0.0001)
+    private func showShapeIfNeed() {
+        shape.transform = on ? CATransform3DMakeScale(1.0, 1.0, 1.0) : CATransform3DMakeScale(0.0001, 0.0001, 0.0001)
     }
 
 
-    internal func switchChanged(sender: UISwitch){
+    internal func switchChanged(){
         
-        if sender.on {
+        if on {
             CATransaction.begin()
             
-            self.shape.removeAnimationForKey("scaleDown")
+            shape.removeAnimationForKey("scaleDown")
             
-            var scaleAnimation:CABasicAnimation  = self.animateKeyPath("transform",
+            var scaleAnimation:CABasicAnimation  = animateKeyPath("transform",
                 fromValue: NSValue(CATransform3D: CATransform3DMakeScale(0.0001, 0.0001, 0.0001)),
                 toValue:NSValue(CATransform3D: CATransform3DMakeScale(1.0, 1.0, 1.0)),
                 timing:kCAMediaTimingFunctionEaseIn);
             
-            self.shape.addAnimation(scaleAnimation, forKey: "scaleUp")
+            shape.addAnimation(scaleAnimation, forKey: "scaleUp")
             
             CATransaction.commit();
         }
         else {
             CATransaction.begin()
-            self.shape.removeAnimationForKey("scaleUp")
+            shape.removeAnimationForKey("scaleUp")
             
-            var scaleAnimation:CABasicAnimation  = self.animateKeyPath("transform",
+            var scaleAnimation:CABasicAnimation  = animateKeyPath("transform",
                 fromValue: NSValue(CATransform3D: CATransform3DMakeScale(1.0, 1.0, 1.0)),
                 toValue:NSValue(CATransform3D: CATransform3DMakeScale(0.0001, 0.0001, 0.0001)),
                 timing:kCAMediaTimingFunctionEaseOut);
                 
-            self.shape.addAnimation(scaleAnimation, forKey: "scaleDown")
+            shape.addAnimation(scaleAnimation, forKey: "scaleDown")
             
             CATransaction.commit();
         }
@@ -114,7 +114,7 @@ class RAMPaperSwitch: UISwitch {
         animation.timingFunction = CAMediaTimingFunction(name: timingFunction)
         animation.removedOnCompletion = false
         animation.fillMode = kCAFillModeForwards
-        animation.duration = self.duration;
+        animation.duration = duration;
         animation.delegate = self
         
         return animation;
@@ -125,11 +125,11 @@ class RAMPaperSwitch: UISwitch {
     
     
     override func animationDidStart(anim: CAAnimation!){
-        self.didAnimationStartClosure(self.on)
+        didAnimationStartClosure(on)
     }
     
     
     override func animationDidStop(anim: CAAnimation!, finished flag: Bool){
-        self.didAnimationStopClosure(self.on, flag)
+        didAnimationStopClosure(on, flag)
     }
 }
