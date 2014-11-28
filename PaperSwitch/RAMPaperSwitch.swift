@@ -46,16 +46,13 @@ class RAMPaperSwitch: UISwitch {
 
 
     override func awakeFromNib() {        
-        var shapeColor:UIColor? = onTintColor
-        if shapeColor == nil {
-            shapeColor = UIColor.greenColor()
-        }
+        var shapeColor:UIColor = (onTintColor != nil) ? onTintColor : UIColor.greenColor()
         
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.whiteColor().CGColor;
         layer.cornerRadius = frame.size.height / 2;
         
-        shape.fillColor = shapeColor?.CGColor
+        shape.fillColor = shapeColor.CGColor
         shape.masksToBounds = true
         
         superview?.layer.insertSublayer(shape, atIndex: 0)
