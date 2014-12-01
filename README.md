@@ -37,7 +37,7 @@ You have ability to set duration of animation instead of default value.
 You can animate other views near the switch. For example, you can change color to views or labels that are inside the same superview. Duration of animation can be gotten from the RAMPaperSwitch's property `duration`. You can animate CoreAnimation properties like this:
 
 ``` swift
-self.paperSwitch.didAnimationStartClosure = {(onAnimation: Bool) in
+self.paperSwitch.animationDidStartClosure = {(onAnimation: Bool) in
     UIView.transitionWithView(self.label, duration: self.paperSwitch.duration, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
         self.label.textColor = onAnimation ? UIColor.whiteColor() : UIColor.blueColor()
     }, completion:nil)
