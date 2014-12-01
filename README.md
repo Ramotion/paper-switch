@@ -4,7 +4,7 @@ Swift subclass of the UISwitch which paints over the parent view with the `onTin
 
 
 #Screenshot
-![PaperSwitch](https://raw.githubusercontent.com/Ramotion/viral-switch/master/screenshot.gif)
+![PaperSwitch](screenshot.gif)
 
 
 ## Requirements
