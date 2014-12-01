@@ -1,6 +1,6 @@
 #RAMPaperSwitch
 
-Swift subclass of the UISwitch which paints over the parent view with the `onTintColor` when the switch is turned on. Implemented concept from [this Dribbble](https://dribbble.com/shots/1749645-Contact-Sync) shot by [Ramotion](https://dribbble.com/teams/Ramotion).
+Swift subclass of the UISwitch which paints over the parent view with the `onTintColor` when the switch is turned on. Implemented concept from [this Dribbble](https://dribbble.com/shots/1749645-Contact-Sync) shot by [Ramotion](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
 
 
 #Screenshot
