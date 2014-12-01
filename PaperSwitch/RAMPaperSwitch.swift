@@ -12,8 +12,8 @@ class RAMPaperSwitch: UISwitch {
     
     @IBInspectable var duration: Double = 0.35
     
-    var didAnimationStartClosure = {(onAnimation: Bool) -> Void in }
-    var didAnimationStopClosure = {(onAnimation: Bool, finished: Bool) -> Void in }
+    var animationDidStartClosure = {(onAnimation: Bool) -> Void in }
+    var animationDidStopClosure = {(onAnimation: Bool, finished: Bool) -> Void in }
     
     private var shape: CAShapeLayer! = CAShapeLayer()
     private var radius: CGFloat = 0.0
@@ -122,11 +122,11 @@ class RAMPaperSwitch: UISwitch {
     
     
     override func animationDidStart(anim: CAAnimation!){
-        didAnimationStartClosure(on)
+        animationDidStartClosure(on)
     }
     
     
     override func animationDidStop(anim: CAAnimation!, finished flag: Bool){
-        didAnimationStopClosure(on, flag)
+        animationDidStopClosure(on, flag)
     }
 }

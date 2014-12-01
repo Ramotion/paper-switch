@@ -30,14 +30,14 @@ class ViewController: UIViewController {
     
     private func setupPaperSwitch() {
         
-        self.paperSwitch1.didAnimationStartClosure = {(onAnimation: Bool) in
+        self.paperSwitch1.animationDidStartClosure = {(onAnimation: Bool) in
             
             self.animateLabel(self.connectContactsLabel, onAnimation: onAnimation, duration: self.paperSwitch1.duration)
             self.animateImageView(self.phone1ImageView, onAnimation: onAnimation, duration: self.paperSwitch1.duration)
         }
         
         
-        self.paperSwitch2.didAnimationStartClosure = {(onAnimation: Bool) in
+        self.paperSwitch2.animationDidStartClosure = {(onAnimation: Bool) in
             
             self.animateLabel(self.self.allowDiscoveryLabel, onAnimation: onAnimation, duration: self.paperSwitch2.duration)
             self.animateImageView(self.phone2ImageView, onAnimation: onAnimation, duration: self.paperSwitch2.duration)
