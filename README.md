@@ -1,6 +1,6 @@
 #RAMPaperSwitch
 
-Swift subclass of the UISwitch which paints over the parent view with the `onTintColor` when the switch is turned on. Implemented concept from [this Dribbble](https://dribbble.com/shots/1749645-Contact-Sync) by [Ramotion](https://dribbble.com/teams/Ramotion), rebound of [Andrea Mazzini](https://github.com/andreamazz)'s [Paper Switch](https://github.com/andreamazz/ViralSwitch)
+Swift subclass of the UISwitch which paints over the parent view with the `onTintColor` when the switch is turned on. Implemented concept from [this Dribbble](https://dribbble.com/shots/1749645-Contact-Sync) by [Ramotion](https://dribbble.com/teams/Ramotion).
 
 
 #Screenshot
@@ -46,7 +46,7 @@ self.paperSwitch.animationDidStartClosure = {(onAnimation: Bool) in
 
 ## About Us
 
-[Ramotion](http://Ramotion.com) is an iPhone app design and development company. We are ready for new interesting iOS app development projects.
+[Ramotion](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) is an iPhone app design and development company. We are ready for new interesting iOS app development projects.
 
 Follow us on [twitter](http://twitter.com/ramotion).
 	
