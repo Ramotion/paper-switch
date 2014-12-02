@@ -44,7 +44,7 @@ self.paperSwitch.animationDidStartClosure = {(onAnimation: Bool) in
 }
 ```
 
-## About Us
+## [Ramotion](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch)
 
 [Ramotion](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) is an iPhone app design and development company. We are ready for new interesting iOS app development projects.
 
