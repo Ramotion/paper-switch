@@ -31,8 +31,14 @@ class RAMPaperSwitch: UISwitch {
     
     private var shape: CAShapeLayer! = CAShapeLayer()
     private var radius: CGFloat = 0.0
-    
-    
+    private var oldState = false
+  
+    override var on: Bool {
+        didSet(oldValue) {
+            oldState = on
+        }
+    }
+  
     override func setOn(on: Bool, animated: Bool) {
         let changed:Bool = on != self.on
         
@@ -75,16 +81,22 @@ class RAMPaperSwitch: UISwitch {
         showShapeIfNeed()
         
         addTarget(self, action: "switchChanged", forControlEvents: UIControlEvents.ValueChanged)
+      
+        super.awakeFromNib()
     }
-    
+  
     
     private func showShapeIfNeed() {
         shape.transform = on ? CATransform3DMakeScale(1.0, 1.0, 1.0) : CATransform3DMakeScale(0.0001, 0.0001, 0.0001)
     }
 
 
-    internal func switchChanged(){
-        
+    internal func switchChanged() {
+        if on == oldState {
+            return;
+        }
+        oldState = on
+      
         if on {
             CATransaction.begin()
             
