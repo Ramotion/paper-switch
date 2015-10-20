@@ -65,8 +65,8 @@ class RAMPaperSwitch: UISwitch {
     }
 
 
-    override func awakeFromNib() {        
-        var shapeColor:UIColor = (onTintColor != nil) ? onTintColor : UIColor.greenColor()
+    override func awakeFromNib() {
+        let shapeColor: UIColor = onTintColor ?? UIColor.greenColor()
         
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.whiteColor().CGColor;
@@ -102,7 +102,7 @@ class RAMPaperSwitch: UISwitch {
             
             shape.removeAnimationForKey("scaleDown")
             
-            var scaleAnimation:CABasicAnimation  = animateKeyPath("transform",
+            let scaleAnimation:CABasicAnimation  = animateKeyPath("transform",
                 fromValue: NSValue(CATransform3D: CATransform3DMakeScale(0.0001, 0.0001, 0.0001)),
                 toValue:NSValue(CATransform3D: CATransform3DMakeScale(1.0, 1.0, 1.0)),
                 timing:kCAMediaTimingFunctionEaseIn);
@@ -115,7 +115,7 @@ class RAMPaperSwitch: UISwitch {
             CATransaction.begin()
             shape.removeAnimationForKey("scaleUp")
             
-            var scaleAnimation:CABasicAnimation  = animateKeyPath("transform",
+            let scaleAnimation:CABasicAnimation  = animateKeyPath("transform",
                 fromValue: NSValue(CATransform3D: CATransform3DMakeScale(1.0, 1.0, 1.0)),
                 toValue:NSValue(CATransform3D: CATransform3DMakeScale(0.0001, 0.0001, 0.0001)),
                 timing:kCAMediaTimingFunctionEaseOut);
@@ -147,12 +147,12 @@ class RAMPaperSwitch: UISwitch {
     //CAAnimation delegate
     
     
-    override func animationDidStart(anim: CAAnimation!){
+    override func animationDidStart(anim: CAAnimation){
         animationDidStartClosure(on)
     }
     
     
-    override func animationDidStop(anim: CAAnimation!, finished flag: Bool){
+    override func animationDidStop(anim: CAAnimation, finished flag: Bool){
         animationDidStopClosure(on, flag)
     }
 }
