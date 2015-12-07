@@ -5,6 +5,7 @@ Swift subclass of the UISwitch which paints over the parent view with the `onTin
 
 #Screenshot
 ![PaperSwitch](screenshot.gif)
+
 The [iPhone mockup](https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) available [here](https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
 
 
