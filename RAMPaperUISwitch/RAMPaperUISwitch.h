@@ -1,4 +1,9 @@
-//  AppDelegate.swift
+//
+//  RAMPaperUISwitch.h
+//
+//  Translated by lookaji on 06/02/15.
+//  Originally:
+//  RAMPaperSwitch.swift
 //
 // Copyright (c) 26/11/14 Ramotion Inc. (http://ramotion.com)
 //
@@ -19,24 +24,15 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+#import <UIKit/UIKit.h>
 
-import UIKit
+@interface RAMPaperUISwitch : UISwitch
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    var window: UIWindow?
-    
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
-        window!.rootViewController = ViewController(nibName:"ViewController", bundle:nil)
-        window!.makeKeyAndVisible()
-        
-        return true
-    }
-}
+@property(nonatomic,assign, getter=isOn) BOOL on;
+@property(nonatomic,copy) void (^animationDidStartClosure)(BOOL onAnimation);
+@property(nonatomic,copy) void (^animationDidStopClosure)(BOOL onAnimation, BOOL finished);
 
 
+-(void)setOn:(BOOL)newOn animated:(BOOL)animated;
+
+@end
