@@ -19,6 +19,11 @@ The [iPhone mockup](https://store.ramotion.com/product/iphone-6-plus-mockups?utm
 
 Just add the `RAMPaperSwitch` folder to your project.
 
+or use [CocoaPods](https://cocoapods.org) with Podfile:
+``` ruby
+pod 'RAMPaperSwitch', '~> 0.0.1'
+```
+
 
 #Usage
 RAMPaperSwitch is a drop-in replacement of UISwitch. You just need to set the `onTintColor` property of the switch, and it will automatically _paint over_ its superview with the selected color.
