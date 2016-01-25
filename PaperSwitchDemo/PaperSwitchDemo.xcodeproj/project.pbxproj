@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DC9AE9D1C5651070035F785 /* FTPaperSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC9AE9C1C5651070035F785 /* FTPaperSwitch.m */; };
 		846E0ED31C464B5C0052CDD8 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E0ED21C464B5C0052CDD8 /* Launch.storyboard */; };
 		9C688A001A274993008BFF1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6889FF1A274993008BFF1E /* AppDelegate.swift */; };
 		9C688A021A274993008BFF1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C688A011A274993008BFF1E /* ViewController.swift */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DC9AE9B1C5651070035F785 /* FTPaperSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPaperSwitch.h; sourceTree = "<group>"; };
+		1DC9AE9C1C5651070035F785 /* FTPaperSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPaperSwitch.m; sourceTree = "<group>"; };
 		846E0ED21C464B5C0052CDD8 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		9C6889FA1A274993008BFF1E /* PaperSwitchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperSwitchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6889FE1A274993008BFF1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DC9AE9A1C5650CA0035F785 /* ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				1DC9AE9B1C5651070035F785 /* FTPaperSwitch.h */,
+				1DC9AE9C1C5651070035F785 /* FTPaperSwitch.m */,
+			);
+			path = ObjectiveC;
+			sourceTree = "<group>";
+		};
 		9C6889F11A274993008BFF1E = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +91,7 @@
 		9C6889FC1A274993008BFF1E /* PaperSwitchDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1DC9AE9A1C5650CA0035F785 /* ObjectiveC */,
 				9C688A211A274A39008BFF1E /* PaperSwitch */,
 				9C6889FF1A274993008BFF1E /* AppDelegate.swift */,
 				9C688A011A274993008BFF1E /* ViewController.swift */,
@@ -169,7 +182,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Ramotion;
 				TargetAttributes = {
@@ -228,6 +241,7 @@
 			files = (
 				9C688A021A274993008BFF1E /* ViewController.swift in Sources */,
 				9C688A231A274A39008BFF1E /* RAMPaperSwitch.swift in Sources */,
+				1DC9AE9D1C5651070035F785 /* FTPaperSwitch.m in Sources */,
 				9C688A001A274993008BFF1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,11 +349,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PaperSwitchDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ramotion.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -347,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PaperSwitchDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
