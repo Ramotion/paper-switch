@@ -22,15 +22,19 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak private var connectContactsLabel: UILabel!
     @IBOutlet weak private var phone1ImageView: UIImageView!
-    @IBOutlet weak private var paperSwitch1: RAMPaperSwitch!
+//    @IBOutlet weak private var paperSwitch1: RAMPaperSwitch!
+    @IBOutlet weak private var paperSwitch1: PaperSwitch!
     
     @IBOutlet weak private var allowDiscoveryLabel: UILabel!
     @IBOutlet weak private var phone2ImageView: UIImageView!
-    @IBOutlet weak private var paperSwitch2: RAMPaperSwitch!
+//    @IBOutlet weak private var paperSwitch2: RAMPaperSwitch!
+    @IBOutlet weak private var paperSwitch2: PaperSwitch!
+    
     
     
     override func viewDidLoad() {
@@ -38,24 +42,39 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.setupPaperSwitch()
         
+        
         self.navigationController?.navigationBarHidden = true
     }
     
+
     
     private func setupPaperSwitch() {
-        
-        self.paperSwitch1.animationDidStartClosure = {(onAnimation: Bool) in
-            
-            self.animateLabel(self.connectContactsLabel, onAnimation: onAnimation, duration: self.paperSwitch1.duration)
-            self.animateImageView(self.phone1ImageView, onAnimation: onAnimation, duration: self.paperSwitch1.duration)
+        paperSwitch1.animationStartBlock = { (animation:CAAnimation!) in
+            print("111111111111")
+            self.animateLabel(self.connectContactsLabel, onAnimation: true, duration: animation.duration)
+            self.animateImageView(self.phone1ImageView, onAnimation: true, duration: animation.duration)
+
         }
         
-        
-        self.paperSwitch2.animationDidStartClosure = {(onAnimation: Bool) in
+        paperSwitch2.animationStartBlock = { (animation:CAAnimation!) in
+            print("2222222222222")            
+            self.animateLabel(self.allowDiscoveryLabel, onAnimation: true, duration: animation.duration)
+            self.animateImageView(self.phone2ImageView, onAnimation: true, duration: animation.duration)
             
-            self.animateLabel(self.self.allowDiscoveryLabel, onAnimation: onAnimation, duration: self.paperSwitch2.duration)
-            self.animateImageView(self.phone2ImageView, onAnimation: onAnimation, duration: self.paperSwitch2.duration)
         }
+
+//        self.paperSwitch1.animationDidStartClosure = {(onAnimation: Bool) in
+//            
+//            self.animateLabel(self.connectContactsLabel, onAnimation: onAnimation, duration: self.paperSwitch1.duration)
+//            self.animateImageView(self.phone1ImageView, onAnimation: onAnimation, duration: self.paperSwitch1.duration)
+//        }
+//        
+//        
+//        self.paperSwitch2.animationDidStartClosure = {(onAnimation: Bool) in
+//            
+//            self.animateLabel(self.self.allowDiscoveryLabel, onAnimation: onAnimation, duration: self.paperSwitch2.duration)
+//            self.animateImageView(self.phone2ImageView, onAnimation: onAnimation, duration: self.paperSwitch2.duration)
+//        }
     }
     
     

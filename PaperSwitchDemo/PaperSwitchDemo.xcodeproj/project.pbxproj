@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DC9AE9D1C5651070035F785 /* FTPaperSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC9AE9C1C5651070035F785 /* FTPaperSwitch.m */; };
+		1D2EFAB01C58BA7A00948D1A /* PaperSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2EFAAF1C58BA7A00948D1A /* PaperSwitch.m */; };
 		846E0ED31C464B5C0052CDD8 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E0ED21C464B5C0052CDD8 /* Launch.storyboard */; };
 		9C688A001A274993008BFF1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6889FF1A274993008BFF1E /* AppDelegate.swift */; };
 		9C688A021A274993008BFF1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C688A011A274993008BFF1E /* ViewController.swift */; };
@@ -28,8 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1DC9AE9B1C5651070035F785 /* FTPaperSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPaperSwitch.h; sourceTree = "<group>"; };
-		1DC9AE9C1C5651070035F785 /* FTPaperSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPaperSwitch.m; sourceTree = "<group>"; };
+		1D2EFAAE1C58BA7A00948D1A /* PaperSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperSwitch.h; sourceTree = "<group>"; };
+		1D2EFAAF1C58BA7A00948D1A /* PaperSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaperSwitch.m; sourceTree = "<group>"; };
+		1DF9DCBD1C570F1E00EADE5C /* PaperSwitchDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaperSwitchDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		846E0ED21C464B5C0052CDD8 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		9C6889FA1A274993008BFF1E /* PaperSwitchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperSwitchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6889FE1A274993008BFF1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,15 +62,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1DC9AE9A1C5650CA0035F785 /* ObjectiveC */ = {
-			isa = PBXGroup;
-			children = (
-				1DC9AE9B1C5651070035F785 /* FTPaperSwitch.h */,
-				1DC9AE9C1C5651070035F785 /* FTPaperSwitch.m */,
-			);
-			path = ObjectiveC;
-			sourceTree = "<group>";
-		};
 		9C6889F11A274993008BFF1E = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +83,6 @@
 		9C6889FC1A274993008BFF1E /* PaperSwitchDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1DC9AE9A1C5650CA0035F785 /* ObjectiveC */,
 				9C688A211A274A39008BFF1E /* PaperSwitch */,
 				9C6889FF1A274993008BFF1E /* AppDelegate.swift */,
 				9C688A011A274993008BFF1E /* ViewController.swift */,
@@ -131,7 +122,10 @@
 		9C688A211A274A39008BFF1E /* PaperSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				1D2EFAAE1C58BA7A00948D1A /* PaperSwitch.h */,
+				1D2EFAAF1C58BA7A00948D1A /* PaperSwitch.m */,
 				9C688A221A274A39008BFF1E /* RAMPaperSwitch.swift */,
+				1DF9DCBD1C570F1E00EADE5C /* PaperSwitchDemo-Bridging-Header.h */,
 			);
 			name = PaperSwitch;
 			path = ../../PaperSwitch;
@@ -241,7 +235,7 @@
 			files = (
 				9C688A021A274993008BFF1E /* ViewController.swift in Sources */,
 				9C688A231A274A39008BFF1E /* RAMPaperSwitch.swift in Sources */,
-				1DC9AE9D1C5651070035F785 /* FTPaperSwitch.m in Sources */,
+				1D2EFAB01C58BA7A00948D1A /* PaperSwitch.m in Sources */,
 				9C688A001A274993008BFF1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +349,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ramotion.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/huafan/Desktop/GithubRepository/paper-switch/PaperSwitch/PaperSwitchDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -369,6 +364,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ramotion.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/huafan/Desktop/GithubRepository/paper-switch/PaperSwitch/PaperSwitchDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};

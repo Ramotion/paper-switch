@@ -1,18 +1,18 @@
 //
-//  FTPaperSwitch.h
-//  PaperSwitchDemo
+//  PaperSwitch.h
+//  XKSCommonSDK
 //
-//  Created by _Finder丶Tiwk on 16/1/25.
-//  Copyright © 2016年 Ramotion. All rights reserved.
+//  Created by _Finder丶Tiwk on 16/1/26.
+//  Copyright © 2016年 _Finder丶Tiwk. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface FTPaperSwitch : UISwitch
+@interface PaperSwitch : UISwitch
 
 /*! 动画时间 默认为0.25秒*/
 @property (nonatomic,assign) CFTimeInterval duration;
-/*! 展开画面填充颜色,如果不设置，默认为控制底色 绿色*/
+/*! 展开画面填充颜色,如果不设置,为onTintColor 如果onTintColor为空则为绿色*/
 @property (nonatomic,strong) UIColor        *fillColor;
 
 /*! 动画开始回调,从block中的animation参数 可以取到动画相关信息*/
