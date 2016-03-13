@@ -57,8 +57,9 @@ public class RAMPaperSwitch: UISwitch {
     // MARK: - Initialization
 
     
-    public required init(view: UIView?) {
+    public required init(view: UIView?, color: UIColor?) {
         super.init(frame: CGRectZero)
+        onTintColor = color
         self.commonInit(view)
     }
     
