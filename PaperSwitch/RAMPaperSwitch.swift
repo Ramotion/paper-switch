@@ -54,18 +54,27 @@ public class RAMPaperSwitch: UISwitch {
     }
     
     
-    override public func layoutSubviews() {
-        let x:CGFloat = max(frame.midX, superview!.frame.size.width - frame.midX);
-        let y:CGFloat = max(frame.midY, superview!.frame.size.height - frame.midY);
-        radius = sqrt(x*x + y*y);
-        
-        shape.frame = CGRectMake(frame.midX - radius,  frame.midY - radius, radius * 2, radius * 2)
-        shape.anchorPoint = CGPointMake(0.5, 0.5);
-        shape.path = UIBezierPath(ovalInRect: CGRectMake(0, 0, radius * 2, radius * 2)).CGPath
+    // MARK: - Initialization
+
+    
+    public required init(view: UIView?) {
+        super.init(frame: CGRectZero)
+        self.commonInit(view)
     }
-
-
+    
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    
     override public func awakeFromNib() {
+        self.commonInit(superview)
+        super.awakeFromNib()
+    }
+    
+    
+    private func commonInit(parentView: UIView?) {
         let shapeColor: UIColor = onTintColor ?? UIColor.greenColor()
         
         layer.borderWidth = 0.5
@@ -75,22 +84,32 @@ public class RAMPaperSwitch: UISwitch {
         shape.fillColor = shapeColor.CGColor
         shape.masksToBounds = true
         
-        superview?.layer.insertSublayer(shape, atIndex: 0)
-        superview?.layer.masksToBounds = true
+        parentView?.layer.insertSublayer(shape, atIndex: 0)
+        parentView?.layer.masksToBounds = true
         
         showShapeIfNeed()
         
         addTarget(self, action: "switchChanged", forControlEvents: UIControlEvents.ValueChanged)
-      
-        super.awakeFromNib()
+    }
+    
+    
+    override public func layoutSubviews() {
+        let x:CGFloat = max(frame.midX, superview!.frame.size.width - frame.midX);
+        let y:CGFloat = max(frame.midY, superview!.frame.size.height - frame.midY);
+        radius = sqrt(x*x + y*y);
+        
+        shape.frame = CGRectMake(frame.midX - radius,  frame.midY - radius, radius * 2, radius * 2)
+        shape.anchorPoint = CGPointMake(0.5, 0.5);
+        shape.path = UIBezierPath(ovalInRect: CGRectMake(0, 0, radius * 2, radius * 2)).CGPath
     }
   
+    // MARK: - Private
     
     private func showShapeIfNeed() {
         shape.transform = on ? CATransform3DMakeScale(1.0, 1.0, 1.0) : CATransform3DMakeScale(0.0001, 0.0001, 0.0001)
     }
 
-
+    
     internal func switchChanged() {
         if on == oldState {
             return;
@@ -143,9 +162,8 @@ public class RAMPaperSwitch: UISwitch {
         return animation;
     }
     
-    
     //MARK: - CAAnimation Delegate
-    
+
     
     override public func animationDidStart(anim: CAAnimation){
         animationDidStartClosure(on)
