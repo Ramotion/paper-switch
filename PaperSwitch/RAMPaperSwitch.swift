@@ -22,7 +22,7 @@
 
 import UIKit
 
-class RAMPaperSwitch: UISwitch {
+public class RAMPaperSwitch: UISwitch {
     
     @IBInspectable var duration: Double = 0.35
     
@@ -33,13 +33,13 @@ class RAMPaperSwitch: UISwitch {
     private var radius: CGFloat = 0.0
     private var oldState = false
   
-    override var on: Bool {
+    override public var on: Bool {
         didSet(oldValue) {
             oldState = on
         }
     }
   
-    override func setOn(on: Bool, animated: Bool) {
+    override public func setOn(on: Bool, animated: Bool) {
         let changed:Bool = on != self.on
         
         super.setOn(on, animated: animated)
@@ -54,7 +54,7 @@ class RAMPaperSwitch: UISwitch {
     }
     
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         let x:CGFloat = max(frame.midX, superview!.frame.size.width - frame.midX);
         let y:CGFloat = max(frame.midY, superview!.frame.size.height - frame.midY);
         radius = sqrt(x*x + y*y);
@@ -65,7 +65,7 @@ class RAMPaperSwitch: UISwitch {
     }
 
 
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         let shapeColor: UIColor = onTintColor ?? UIColor.greenColor()
         
         layer.borderWidth = 0.5
@@ -144,15 +144,15 @@ class RAMPaperSwitch: UISwitch {
     }
     
     
-    //CAAnimation delegate
+    //MARK: - CAAnimation Delegate
     
     
-    override func animationDidStart(anim: CAAnimation){
+    override public func animationDidStart(anim: CAAnimation){
         animationDidStartClosure(on)
     }
     
     
-    override func animationDidStop(anim: CAAnimation, finished flag: Bool){
+    override public func animationDidStop(anim: CAAnimation, finished flag: Bool){
         animationDidStopClosure(on, flag)
     }
 }
