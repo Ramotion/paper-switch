@@ -27,7 +27,7 @@ Just add the `RAMPaperSwitch` folder to your project.
 
 or use [CocoaPods](https://cocoapods.org) with Podfile:
 ``` ruby
-pod 'RAMPaperSwitch', '~> 0.0.1'
+pod 'RAMPaperSwitch', '~> 0.0.2'
 ```
 
 
