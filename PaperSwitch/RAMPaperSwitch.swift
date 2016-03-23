@@ -33,6 +33,8 @@ public class RAMPaperSwitch: UISwitch {
     private var radius: CGFloat = 0.0
     private var oldState = false
   
+    private let defaultTintColor = UIColor.greenColor()
+  
     override public var on: Bool {
         didSet(oldValue) {
             oldState = on
@@ -76,7 +78,7 @@ public class RAMPaperSwitch: UISwitch {
     
     
     private func commonInit(parentView: UIView?) {
-        let shapeColor: UIColor = onTintColor ?? UIColor.greenColor()
+        let shapeColor: UIColor = onTintColor ?? defaultTintColor
         
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.whiteColor().CGColor;
@@ -116,6 +118,9 @@ public class RAMPaperSwitch: UISwitch {
             return;
         }
         oldState = on
+     
+      let shapeColor: UIColor = onTintColor ?? defaultTintColor
+      shape.fillColor = shapeColor.CGColor
       
         if on {
             CATransaction.begin()
