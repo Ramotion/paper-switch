@@ -23,160 +23,168 @@
 import UIKit
 
 public class RAMPaperSwitch: UISwitch {
-    
-    @IBInspectable var duration: Double = 0.35
-    
-    var animationDidStartClosure = {(onAnimation: Bool) -> Void in }
-    var animationDidStopClosure = {(onAnimation: Bool, finished: Bool) -> Void in }
-    
-    private var shape: CAShapeLayer! = CAShapeLayer()
-    private var radius: CGFloat = 0.0
-    private var oldState = false
   
-    private let defaultTintColor = UIColor.greenColor()
-  
-    override public var on: Bool {
-        didSet(oldValue) {
-            oldState = on
-        }
-    }
-  
-    override public func setOn(on: Bool, animated: Bool) {
-        let changed:Bool = on != self.on
-        
-        super.setOn(on, animated: animated)
-        
-        if changed {
-            if animated {
-                switchChanged()
-            } else {
-                showShapeIfNeed()
-            }
-        }
-    }
+  struct Constants {
     
-    
-    // MARK: - Initialization
+    static let scale = "transform.scale"
+    static let up    = "scaleUp"
+    static let down  = "scaleDown"
+  }
+  
+  @IBInspectable var duration: Double = 0.35
+  
+  var animationDidStartClosure = {(onAnimation: Bool) -> Void in }
+  var animationDidStopClosure  = {(onAnimation: Bool, finished: Bool) -> Void in }
+  
+  private var shape: CAShapeLayer! = CAShapeLayer()
+  private var radius: CGFloat      = 0.0
+  private var oldState             = false
 
-    
-    public required init(view: UIView?, color: UIColor?) {
-        super.init(frame: CGRectZero)
-        onTintColor = color
-        self.commonInit(view)
-    }
-    
-    
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    
-    override public func awakeFromNib() {
-        self.commonInit(superview)
-        super.awakeFromNib()
-    }
-    
-    
-    private func commonInit(parentView: UIView?) {
-        let shapeColor: UIColor = onTintColor ?? defaultTintColor
-        
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor.whiteColor().CGColor;
-        layer.cornerRadius = frame.size.height / 2;
-        
-        shape.fillColor = shapeColor.CGColor
-        shape.masksToBounds = true
-        
-        parentView?.layer.insertSublayer(shape, atIndex: 0)
-        parentView?.layer.masksToBounds = true
-        
-        showShapeIfNeed()
-        
-        addTarget(self, action: "switchChanged", forControlEvents: UIControlEvents.ValueChanged)
-    }
-    
-    
-    override public func layoutSubviews() {
-        let x:CGFloat = max(frame.midX, superview!.frame.size.width - frame.midX);
-        let y:CGFloat = max(frame.midY, superview!.frame.size.height - frame.midY);
-        radius = sqrt(x*x + y*y);
-        
-        shape.frame = CGRectMake(frame.midX - radius,  frame.midY - radius, radius * 2, radius * 2)
-        shape.anchorPoint = CGPointMake(0.5, 0.5);
-        shape.path = UIBezierPath(ovalInRect: CGRectMake(0, 0, radius * 2, radius * 2)).CGPath
-    }
+  private let defaultTintColor = UIColor.greenColor()
   
-    // MARK: - Private
-    
-    private func showShapeIfNeed() {
-        shape.transform = on ? CATransform3DMakeScale(1.0, 1.0, 1.0) : CATransform3DMakeScale(0.0001, 0.0001, 0.0001)
+  override public var on: Bool {
+    didSet(oldValue) {
+      oldState = on
     }
+  }
+  
+  // MARK: - Initialization
+  
+  public required init(view: UIView?, color: UIColor?) {
+    super.init(frame: CGRectZero)
+    onTintColor = color
+    self.commonInit(view)
+  }
+  
+  public required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
+  
+  override public func awakeFromNib() {
+    self.commonInit(superview)
+    super.awakeFromNib()
+  }
+}
 
+// MARK: public
+
+public extension RAMPaperSwitch {
+  
+  override public func setOn(on: Bool, animated: Bool) {
+    let changed:Bool = on != self.on
     
-    internal func switchChanged() {
-        if on == oldState {
-            return;
-        }
-        oldState = on
-     
-      let shapeColor: UIColor = onTintColor ?? defaultTintColor
-      shape.fillColor = shapeColor.CGColor
+    super.setOn(on, animated: animated)
+    
+    if changed {
+      switchChangeWithAniatiom(animated)
+    }
+  }
+}
+
+// MARK: Helpers 
+
+extension RAMPaperSwitch {
+  
+  private func commonInit(parentView: UIView?) {
+    let shapeColor: UIColor = onTintColor ?? defaultTintColor
+    
+    layer.borderWidth  = 0.5
+    layer.borderColor  = UIColor.whiteColor().CGColor;
+    layer.cornerRadius = frame.size.height / 2;
+
+    shape.fillColor     = shapeColor.CGColor
+    shape.masksToBounds = true
+
+    parentView?.layer.insertSublayer(shape, atIndex: 0)
+    parentView?.layer.masksToBounds = true
+    
+    showShapeIfNeed()
+    
+    addTarget(self, action: #selector(RAMPaperSwitch.switchChanged), forControlEvents: UIControlEvents.ValueChanged)
+  }
+  
+  
+  override public func layoutSubviews() {
+    let x:CGFloat = max(frame.midX, superview!.frame.size.width - frame.midX);
+    let y:CGFloat = max(frame.midY, superview!.frame.size.height - frame.midY);
+    radius = sqrt(x*x + y*y);
+    
+    shape.frame = CGRectMake(frame.midX - radius,  frame.midY - radius, radius * 2, radius * 2)
+    shape.anchorPoint = CGPointMake(0.5, 0.5);
+    shape.path = UIBezierPath(ovalInRect: CGRectMake(0, 0, radius * 2, radius * 2)).CGPath
+  }
+  
+  // MARK: - Private
+  
+  private func showShapeIfNeed() {
+    shape.transform = on ? CATransform3DMakeScale(1.0, 1.0, 1.0) : CATransform3DMakeScale(0.0001, 0.0001, 0.0001)
+  }
+  
+  internal func switchChanged() {
+    switchChangeWithAniatiom(true)
+  }
+}
+
+// MARK: animations
+
+extension RAMPaperSwitch {
+  
+  private func animateKeyPath(keyPath: String, fromValue from: CGFloat?, toValue to: CGFloat, timing timingFunction: String) -> CABasicAnimation {
+    
+    let animation:CABasicAnimation = CABasicAnimation(keyPath: keyPath)
+    
+    animation.fromValue           = from
+    animation.toValue             = to
+    animation.repeatCount         = 1
+    animation.timingFunction      = CAMediaTimingFunction(name: timingFunction)
+    animation.removedOnCompletion = false
+    animation.fillMode            = kCAFillModeForwards
+    animation.duration            = duration;
+    animation.delegate            = self
+    
+    return animation;
+  }
+  
+  private func switchChangeWithAniatiom(animation: Bool) {
+    if on == oldState {
+      return;
+    }
+    oldState = on
+    
+    let shapeColor: UIColor = onTintColor ?? defaultTintColor
+    shape.fillColor = shapeColor.CGColor
+    
+    var fromValue: CGFloat? = nil
+    if on {
+      fromValue = shape.animationKeys()?.count > 0 ? nil : 0.01
+      let scaleAnimation:CABasicAnimation  = animateKeyPath(Constants.scale,
+                                                            fromValue: fromValue,
+                                                            toValue: 1.0,
+                                                            timing:kCAMediaTimingFunctionEaseIn);
+      if animation == false { scaleAnimation.duration = 0.0001 }
       
-        if on {
-            CATransaction.begin()
-            
-            shape.removeAnimationForKey("scaleDown")
-            
-            let scaleAnimation:CABasicAnimation  = animateKeyPath("transform",
-                fromValue: NSValue(CATransform3D: CATransform3DMakeScale(0.0001, 0.0001, 0.0001)),
-                toValue:NSValue(CATransform3D: CATransform3DMakeScale(1.0, 1.0, 1.0)),
-                timing:kCAMediaTimingFunctionEaseIn);
-            
-            shape.addAnimation(scaleAnimation, forKey: "scaleUp")
-            
-            CATransaction.commit();
-        }
-        else {
-            CATransaction.begin()
-            shape.removeAnimationForKey("scaleUp")
-            
-            let scaleAnimation:CABasicAnimation  = animateKeyPath("transform",
-                fromValue: NSValue(CATransform3D: CATransform3DMakeScale(1.0, 1.0, 1.0)),
-                toValue:NSValue(CATransform3D: CATransform3DMakeScale(0.0001, 0.0001, 0.0001)),
-                timing:kCAMediaTimingFunctionEaseOut);
-                
-            shape.addAnimation(scaleAnimation, forKey: "scaleDown")
-            
-            CATransaction.commit();
-        }
+      shape.addAnimation(scaleAnimation, forKey: Constants.up)
     }
-    
-    
-    private func animateKeyPath(keyPath: String, fromValue from: AnyObject, toValue to: AnyObject, timing timingFunction: String) -> CABasicAnimation {
-    
-        let animation:CABasicAnimation = CABasicAnimation(keyPath: keyPath)
-        
-        animation.fromValue = from
-        animation.toValue = to
-        animation.repeatCount = 1
-        animation.timingFunction = CAMediaTimingFunction(name: timingFunction)
-        animation.removedOnCompletion = false
-        animation.fillMode = kCAFillModeForwards
-        animation.duration = duration;
-        animation.delegate = self
-        
-        return animation;
+    else {
+      fromValue = shape.animationKeys()?.count > 0 ? nil : 1.0
+      
+      let scaleAnimation:CABasicAnimation  = animateKeyPath(Constants.scale,
+                                                            fromValue: fromValue,
+                                                            toValue: 0.01,
+                                                            timing:kCAMediaTimingFunctionEaseOut);
+      if animation == false { scaleAnimation.duration = 0.0001 }
+      
+      shape.addAnimation(scaleAnimation, forKey: Constants.down)
     }
-    
-    //MARK: - CAAnimation Delegate
+  }
 
-    
-    override public func animationDidStart(anim: CAAnimation){
-        animationDidStartClosure(on)
-    }
-    
-    
-    override public func animationDidStop(anim: CAAnimation, finished flag: Bool){
-        animationDidStopClosure(on, flag)
-    }
+  //MARK: - CAAnimation Delegate
+  
+  override public func animationDidStart(anim: CAAnimation){
+    animationDidStartClosure(on)
+  }
+  
+  override public func animationDidStop(anim: CAAnimation, finished flag: Bool){
+    animationDidStopClosure(on, flag)
+  }
 }
