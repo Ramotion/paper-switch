@@ -40,7 +40,8 @@ public class RAMPaperSwitch: UISwitch {
   private var radius: CGFloat      = 0.0
   private var oldState             = false
 
-  private let defaultTintColor = UIColor.greenColor()
+  private var defaultTintColor: UIColor?
+  private var parentView: UIView?
   
   override public var on: Bool {
     didSet(oldValue) {
@@ -86,13 +87,17 @@ public extension RAMPaperSwitch {
 extension RAMPaperSwitch {
   
   private func commonInit(parentView: UIView?) {
-    let shapeColor: UIColor = onTintColor ?? defaultTintColor
+    guard let onTintColor = self.onTintColor else {
+      fatalError("set tint color")
+    }
+    self.parentView = parentView
+    self.defaultTintColor = parentView?.backgroundColor
     
     layer.borderWidth  = 0.5
     layer.borderColor  = UIColor.whiteColor().CGColor;
     layer.cornerRadius = frame.size.height / 2;
 
-    shape.fillColor     = shapeColor.CGColor
+    shape.fillColor     = onTintColor.CGColor
     shape.masksToBounds = true
 
     parentView?.layer.insertSublayer(shape, atIndex: 0)
@@ -146,19 +151,20 @@ extension RAMPaperSwitch {
   }
   
   private func switchChangeWithAniatiom(animation: Bool) {
+    guard let onTintColor = self.onTintColor else {
+      fatalError("set tint color")
+    }
+
     if on == oldState {
       return;
     }
     oldState = on
     
-    let shapeColor: UIColor = onTintColor ?? defaultTintColor
-    shape.fillColor = shapeColor.CGColor
+    shape.fillColor = onTintColor.CGColor
     
-    var fromValue: CGFloat? = nil
     if on {
-      fromValue = shape.animationKeys()?.count > 0 ? nil : 0.01
       let scaleAnimation:CABasicAnimation  = animateKeyPath(Constants.scale,
-                                                            fromValue: fromValue,
+                                                            fromValue: 0.01,
                                                             toValue: 1.0,
                                                             timing:kCAMediaTimingFunctionEaseIn);
       if animation == false { scaleAnimation.duration = 0.0001 }
@@ -166,10 +172,8 @@ extension RAMPaperSwitch {
       shape.addAnimation(scaleAnimation, forKey: Constants.up)
     }
     else {
-      fromValue = shape.animationKeys()?.count > 0 ? nil : 1.0
-      
       let scaleAnimation:CABasicAnimation  = animateKeyPath(Constants.scale,
-                                                            fromValue: fromValue,
+                                                            fromValue: 1.0,
                                                             toValue: 0.01,
                                                             timing:kCAMediaTimingFunctionEaseOut);
       if animation == false { scaleAnimation.duration = 0.0001 }
@@ -181,10 +185,16 @@ extension RAMPaperSwitch {
   //MARK: - CAAnimation Delegate
   
   override public func animationDidStart(anim: CAAnimation){
+    parentView?.backgroundColor = defaultTintColor
+    
     animationDidStartClosure(on)
   }
   
   override public func animationDidStop(anim: CAAnimation, finished flag: Bool){
+    print(flag)
+    if flag == true {
+      parentView?.backgroundColor = on == true ? onTintColor : defaultTintColor
+    }
     animationDidStopClosure(on, flag)
   }
 }
