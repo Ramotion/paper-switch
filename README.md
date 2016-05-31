@@ -27,7 +27,7 @@ Just add the `RAMPaperSwitch` folder to your project.
 
 or use [CocoaPods](https://cocoapods.org) with Podfile:
 ``` ruby
-pod 'RAMPaperSwitch', '~> 0.0.3'
+pod 'RAMPaperSwitch', '~> 1.0.1'
 ```
 
 
@@ -63,6 +63,3 @@ See our other [open-source projects](https://github.com/ramotion) or [hire](http
 
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/ramotion/paper-switch)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ramotion.svg?style=social)](https://twitter.com/ramotion)
-
-
-	
