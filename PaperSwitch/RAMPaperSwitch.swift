@@ -43,12 +43,6 @@ public class RAMPaperSwitch: UISwitch {
   private var defaultTintColor: UIColor?
   private var parentView: UIView?
   
-  override public var on: Bool {
-    didSet(oldValue) {
-      oldState = on
-    }
-  }
-  
   // MARK: - Initialization
   
   public required init(view: UIView?, color: UIColor?) {
@@ -152,13 +146,8 @@ extension RAMPaperSwitch {
   
   private func switchChangeWithAniatiom(animation: Bool) {
     guard let onTintColor = self.onTintColor else {
-      fatalError("set tint color")
+      return
     }
-
-    if on == oldState {
-      return;
-    }
-    oldState = on
     
     shape.fillColor = onTintColor.CGColor
     
