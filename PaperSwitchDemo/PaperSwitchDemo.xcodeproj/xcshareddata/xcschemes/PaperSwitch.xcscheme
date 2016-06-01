@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9C6889F91A274993008BFF1E"
-               BuildableName = "PaperSwitchDemo.app"
-               BlueprintName = "PaperSwitchDemo"
+               BlueprintIdentifier = "84BE57D11CFF03ED0073C92B"
+               BuildableName = "PaperSwitch.framework"
+               BlueprintName = "PaperSwitch"
                ReferencedContainer = "container:PaperSwitchDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9C688A0E1A274993008BFF1E"
-               BuildableName = "PaperSwitchDemoTests.xctest"
-               BlueprintName = "PaperSwitchDemoTests"
-               ReferencedContainer = "container:PaperSwitchDemo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C6889F91A274993008BFF1E"
-            BuildableName = "PaperSwitchDemo.app"
-            BlueprintName = "PaperSwitchDemo"
-            ReferencedContainer = "container:PaperSwitchDemo.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C6889F91A274993008BFF1E"
-            BuildableName = "PaperSwitchDemo.app"
-            BlueprintName = "PaperSwitchDemo"
+            BlueprintIdentifier = "84BE57D11CFF03ED0073C92B"
+            BuildableName = "PaperSwitch.framework"
+            BlueprintName = "PaperSwitch"
             ReferencedContainer = "container:PaperSwitchDemo.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C6889F91A274993008BFF1E"
-            BuildableName = "PaperSwitchDemo.app"
-            BlueprintName = "PaperSwitchDemo"
+            BlueprintIdentifier = "84BE57D11CFF03ED0073C92B"
+            BuildableName = "PaperSwitch.framework"
+            BlueprintName = "PaperSwitch"
             ReferencedContainer = "container:PaperSwitchDemo.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
