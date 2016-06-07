@@ -22,6 +22,7 @@
 
 import UIKit
 
+/// Swift subclass of the UISwitch which paints over the parent view with the onTintColor when the switch is turned on.
 public class RAMPaperSwitch: UISwitch {
   
   struct Constants {
@@ -31,10 +32,14 @@ public class RAMPaperSwitch: UISwitch {
     static let down  = "scaleDown"
   }
   
-  @IBInspectable var duration: Double = 0.35
+  ///  The total duration of the animations, measured in seconds. Default 0.35
+  @IBInspectable public var duration: Double = 0.35
   
-  var animationDidStartClosure = {(onAnimation: Bool) -> Void in }
-  var animationDidStopClosure  = {(onAnimation: Bool, finished: Bool) -> Void in }
+  /// Closuer call when animation start
+  public var animationDidStartClosure = {(onAnimation: Bool) -> Void in }
+  
+  /// Closuer call when animation finish
+  public var animationDidStopClosure  = {(onAnimation: Bool, finished: Bool) -> Void in }
   
   private var shape: CAShapeLayer! = CAShapeLayer()
   private var radius: CGFloat      = 0.0
@@ -45,6 +50,14 @@ public class RAMPaperSwitch: UISwitch {
   
   // MARK: - Initialization
   
+  /**
+   Returns an initialized switch object.
+   
+   - parameter view:  animatable view
+   - parameter color: The color which fill view.
+   
+   - returns: An initialized UISwitch object.
+   */
   public required init(view: UIView?, color: UIColor?) {
     super.init(frame: CGRectZero)
     onTintColor = color
