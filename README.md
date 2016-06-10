@@ -1,4 +1,4 @@
-![header](./header.png)
+![header](https://raw.githubusercontent.com/Ramotion/paper-switch/master/header.png)
 #RAMPaperSwitch
 [![CocoaPods](https://img.shields.io/cocoapods/p/RAMPaperSwitch.svg)](https://cocoapods.org/pods/RAMPaperSwitch)
 [![CocoaPods](https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg)](http://cocoapods.org/pods/RAMPaperSwitch)
@@ -11,7 +11,7 @@ Swift subclass of the UISwitch which paints over the parent view with the `onTin
 
 
 #Screenshot
-![PaperSwitch](screenshot.gif)
+![PaperSwitch](https://raw.githubusercontent.com/Ramotion/paper-switch/master/screenshot.gif)
 
 The [iPhone mockup](https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) available [here](https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
 
