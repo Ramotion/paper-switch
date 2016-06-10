@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PaperSwitchDemo  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="PaperSwitchDemo  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">PaperSwitchDemo Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">PaperSwitchDemo Reference</a>
+        <img id="carat" src="img/carat.png" />
+        PaperSwitchDemo  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/RAMPaperSwitch.html">RAMPaperSwitch</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p><img src="https://raw.githubusercontent.com/Ramotion/paper-switch/master/header.png" alt="header"></p>
+<a href='#rampaperswitch' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='rampaperswitch'>RAMPaperSwitch</h1>
+
+<p><a href="https://cocoapods.org/pods/RAMPaperSwitch"><img src="https://img.shields.io/cocoapods/p/RAMPaperSwitch.svg" alt="CocoaPods"></a>
+<a href="http://cocoapods.org/pods/RAMPaperSwitch"><img src="https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg" alt="CocoaPods"></a>
+<a href="https://cdn.rawgit.com/Ramotion/paper-switch/master/docs/index.html"><img src="https://img.shields.io/cocoapods/metrics/doc-percent/RAMPaperSwitch.svg" alt="CocoaPods"></a>
+<a href="https://github.com/Ramotion/paper-switch"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="http://twitter.com/Ramotion"><img src="https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat" alt="Twitter"></a>
+<a href="https://travis-ci.org/Ramotion/paper-switch"><img src="https://img.shields.io/travis/Ramotion/paper-switch.svg" alt="Travis"></a></p>
+
+<p>Swift subclass of the UISwitch which paints over the parent view with the <code>onTintColor</code> when the switch is turned on. Implemented concept from <a href="https://dribbble.com/shots/1749645-Contact-Sync">this Dribbble</a> shot by <a href="https://ramotion.com?utm_source=gthb&amp;utm_medium=special&amp;utm_campaign=paper-switch">Ramotion</a>.</p>
+<a href='#screenshot' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='screenshot'>Screenshot</h1>
+
+<p><img src="https://raw.githubusercontent.com/Ramotion/paper-switch/master/screenshot.gif" alt="PaperSwitch"></p>
+
+<p>The <a href="https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&amp;utm_medium=special&amp;utm_campaign=paper-switch">iPhone mockup</a> available <a href="https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&amp;utm_medium=special&amp;utm_campaign=paper-switch">here</a>.</p>
+<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
+
+<ul>
+<li>iOS 8.0+</li>
+<li>Xcode 6.1</li>
+</ul>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='installation'>Installation</h1>
+
+<p>Just add the <code>RAMPaperSwitch</code> folder to your project.</p>
+
+<p>or use <a href="https://cocoapods.org">CocoaPods</a> with Podfile:
+<code>ruby
+pod &#39;RAMPaperSwitch&#39;
+</code>
+or <a href="https://github.com/Carthage/Carthage">Carthage</a> users can simply add to their <code>Cartfile</code>:
+<code>
+github &quot;Ramotion/paper-switch&quot;
+</code></p>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='usage'>Usage</h1>
+
+<p>RAMPaperSwitch is a drop-in replacement of UISwitch. You just need to set the <code>onTintColor</code> property of the switch, and it will automatically <em>paint over</em> its superview with the selected color.
+You have ability to set duration of animation instead of default value.</p>
+
+<ol>
+<li><p>Create a new UISwitch in your storyboard or nib.</p></li>
+<li><p>Set the class of the UISwitch to RAMPaperSwitch in your Storyboard or nib.</p></li>
+<li><p>Set <code>onTintColor</code> for the switch</p></li>
+<li><p>Set <code>duration</code> property programmatically if You want to change animation duration.</p></li>
+<li><p>Add animation for other views near the switch if need.</p></li>
+</ol>
+<a href='#animate_views' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='animate_views'>Animate views</h1>
+
+<p>You can animate other views near the switch. For example, you can change color to views or labels that are inside the same superview. Duration of animation can be gotten from the RAMPaperSwitch&rsquo;s property <code>duration</code>. You can animate CoreAnimation properties like this:</p>
+<pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="n">paperSwitch</span><span class="o">.</span><span class="n">animationDidStartClosure</span> <span class="o">=</span> <span class="p">{(</span><span class="nv">onAnimation</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">in</span>
+    <span class="kt">UIView</span><span class="o">.</span><span class="nf">transitionWithView</span><span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">paperSwitch</span><span class="o">.</span><span class="n">duration</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">UIViewAnimationOptions</span><span class="o">.</span><span class="kt">TransitionCrossDissolve</span><span class="p">,</span> <span class="nv">animations</span><span class="p">:</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">textColor</span> <span class="o">=</span> <span class="n">onAnimation</span> <span class="p">?</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">whiteColor</span><span class="p">()</span> <span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">blueColor</span><span class="p">()</span>
+    <span class="p">},</span> <span class="nv">completion</span><span class="p">:</span><span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#about' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about'>About</h2>
+
+<p>The project maintained by <a href="https://ramotion.com?utm_source=gthb&amp;utm_medium=special&amp;utm_campaign=paper-switch">app development agency</a> <a href="https://ramotion.com?utm_source=gthb&amp;utm_medium=special&amp;utm_campaign=paper-switch">Ramotion Inc.</a>
+See our other <a href="https://github.com/ramotion">open-source projects</a> or <a href="https://ramotion.com?utm_source=gthb&amp;utm_medium=special&amp;utm_campaign=paper-switch">hire</a> us to design, develop, and grow your product.</p>
+
+<p><a href="https://twitter.com/intent/tweet?text=https://github.com/ramotion/paper-switch"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" alt="Twitter URL"></a>
+<a href="https://twitter.com/ramotion"><img src="https://img.shields.io/twitter/follow/ramotion.svg?style=social" alt="Twitter Follow"></a></p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">AlexKalinkin</a>. All rights reserved. (Last updated: 2016-06-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
