@@ -1,4 +1,4 @@
-[![header](https://raw.githubusercontent.com/Ramotion/paper-switch/master/header.png)](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=navigation-stack-logo)
+[![header](https://raw.githubusercontent.com/Ramotion/paper-switch/master/header.png)](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-logo)
 #RAMPaperSwitch
 [![CocoaPods](https://img.shields.io/cocoapods/p/RAMPaperSwitch.svg)](https://cocoapods.org/pods/RAMPaperSwitch)
 [![CocoaPods](https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg)](http://cocoapods.org/pods/RAMPaperSwitch)
@@ -8,7 +8,7 @@
 [![Travis](https://img.shields.io/travis/Ramotion/paper-switch.svg)](https://travis-ci.org/Ramotion/paper-switch)
 
 ## About
-Ramotion specializes in building dedicated engineering teams and developing custom software.<br> [Contact our team](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=navigation-stack-contact-us) and we’ll help you work with the best engineers from Eastern Europe.
+This project is maintained by Ramotion, an agency specialized in building dedicated engineering teams and developing custom software.<br><br> [Contact our team](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-contact-us) and we’ll help you work with the best engineers from Eastern Europe.
 
 
 #Screenshot
