@@ -1,4 +1,4 @@
-![header](https://raw.githubusercontent.com/Ramotion/paper-switch/master/header.png)
+[![header](https://raw.githubusercontent.com/Ramotion/paper-switch/master/header.png)](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-logo)
 #RAMPaperSwitch
 [![CocoaPods](https://img.shields.io/cocoapods/p/RAMPaperSwitch.svg)](https://cocoapods.org/pods/RAMPaperSwitch)
 [![CocoaPods](https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg)](http://cocoapods.org/pods/RAMPaperSwitch)
@@ -7,7 +7,8 @@
 [![Twitter](https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat)](http://twitter.com/Ramotion)
 [![Travis](https://img.shields.io/travis/Ramotion/paper-switch.svg)](https://travis-ci.org/Ramotion/paper-switch)
 
-Swift subclass of the UISwitch which paints over the parent view with the `onTintColor` when the switch is turned on. Implemented concept from [this Dribbble](https://dribbble.com/shots/1749645-Contact-Sync) shot by [Ramotion](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
+## About
+This project is maintained by Ramotion, an agency specialized in building dedicated engineering teams and developing custom software.<br><br> [Contact our team](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-contact-us) and we’ll help you work with the best engineers from Eastern Europe.
 
 
 #Screenshot
@@ -62,9 +63,7 @@ self.paperSwitch.animationDidStartClosure = {(onAnimation: Bool) in
 }
 ```
 
-## About
-The project maintained by [app development agency](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) [Ramotion Inc.](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch)
-See our other [open-source projects](https://github.com/ramotion) or [hire](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) us to design, develop, and grow your product.
+## Folow Us
 
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/ramotion/paper-switch)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ramotion.svg?style=social)](https://twitter.com/ramotion)
