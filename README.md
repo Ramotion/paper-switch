@@ -12,7 +12,7 @@ This project is maintained by Ramotion, an agency specialized in building dedica
 
 
 #Screenshot
-![PaperSwitch](https://raw.githubusercontent.com/Ramotion/paper-switch/master/screenshot.gif)
+[![PaperSwitch](https://raw.githubusercontent.com/Ramotion/paper-switch/master/screenshot.gif)](https://dribbble.com/shots/1749645-Contact-Sync)
 
 The [iPhone mockup](https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) available [here](https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
 
