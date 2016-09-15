@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		154E67C21D8AA47900E85781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154E67C11D8AA47900E85781 /* Main.storyboard */; };
 		846E0ED31C464B5C0052CDD8 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E0ED21C464B5C0052CDD8 /* Launch.storyboard */; };
 		84BE57D51CFF03ED0073C92B /* PaperSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BE57D41CFF03ED0073C92B /* PaperSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84BE57D91CFF03ED0073C92B /* PaperSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE57D21CFF03ED0073C92B /* PaperSwitch.framework */; };
@@ -16,7 +17,6 @@
 		9C688A021A274993008BFF1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C688A011A274993008BFF1E /* ViewController.swift */; };
 		9C688A071A274993008BFF1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C688A061A274993008BFF1E /* Images.xcassets */; };
 		9C688A161A274993008BFF1E /* PaperSwitchDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C688A151A274993008BFF1E /* PaperSwitchDemoTests.swift */; };
-		9C688A201A274A25008BFF1E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C688A1F1A274A25008BFF1E /* ViewController.xib */; };
 		9C688A231A274A39008BFF1E /* RAMPaperSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C688A221A274A39008BFF1E /* RAMPaperSwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +52,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		154E67C11D8AA47900E85781 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		158583FB1D8A9C4E00175A4D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		158583FD1D8A9C9700175A4D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		846E0ED21C464B5C0052CDD8 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		84BE57D21CFF03ED0073C92B /* PaperSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PaperSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE57D41CFF03ED0073C92B /* PaperSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaperSwitch.h; sourceTree = "<group>"; };
@@ -64,7 +67,6 @@
 		9C688A0F1A274993008BFF1E /* PaperSwitchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperSwitchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C688A141A274993008BFF1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C688A151A274993008BFF1E /* PaperSwitchDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperSwitchDemoTests.swift; sourceTree = "<group>"; };
-		9C688A1F1A274A25008BFF1E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		9C688A221A274A39008BFF1E /* RAMPaperSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMPaperSwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		158583FA1D8A9C4E00175A4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				158583FD1D8A9C9700175A4D /* QuartzCore.framework */,
+				158583FB1D8A9C4E00175A4D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84BE57D31CFF03ED0073C92B /* PaperSwitch */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +121,7 @@
 				9C688A121A274993008BFF1E /* PaperSwitchDemoTests */,
 				84BE57D31CFF03ED0073C92B /* PaperSwitch */,
 				9C6889FB1A274993008BFF1E /* Products */,
+				158583FA1D8A9C4E00175A4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,10 +141,10 @@
 				9C688A211A274A39008BFF1E /* PaperSwitch */,
 				9C6889FF1A274993008BFF1E /* AppDelegate.swift */,
 				9C688A011A274993008BFF1E /* ViewController.swift */,
-				9C688A1F1A274A25008BFF1E /* ViewController.xib */,
 				9C688A061A274993008BFF1E /* Images.xcassets */,
 				9C6889FD1A274993008BFF1E /* Supporting Files */,
 				846E0ED21C464B5C0052CDD8 /* Launch.storyboard */,
+				154E67C11D8AA47900E85781 /* Main.storyboard */,
 			);
 			path = PaperSwitchDemo;
 			sourceTree = "<group>";
@@ -248,17 +260,21 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Ramotion;
 				TargetAttributes = {
 					84BE57D11CFF03ED0073C92B = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					9C6889F91A274993008BFF1E = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					9C688A0E1A274993008BFF1E = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 9C6889F91A274993008BFF1E;
 					};
 				};
@@ -295,9 +311,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C688A201A274A25008BFF1E /* ViewController.xib in Resources */,
 				9C688A071A274993008BFF1E /* Images.xcassets in Resources */,
 				846E0ED31C464B5C0052CDD8 /* Launch.storyboard in Resources */,
+				154E67C21D8AA47900E85781 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -371,6 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramotion.PaperSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -380,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -395,6 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramotion.PaperSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -413,8 +433,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -423,6 +445,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -435,11 +458,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -457,8 +481,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -466,15 +492,18 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -483,26 +512,30 @@
 		9C688A1A1A274993008BFF1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PaperSwitchDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ramotion.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		9C688A1B1A274993008BFF1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PaperSwitchDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ramotion.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -522,6 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ramotion.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaperSwitchDemo.app/PaperSwitchDemo";
 			};
 			name = Debug;
@@ -538,6 +572,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ramotion.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaperSwitchDemo.app/PaperSwitchDemo";
 			};
 			name = Release;
@@ -552,6 +587,7 @@
 				84BE57DC1CFF03ED0073C92B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C6889F51A274993008BFF1E /* Build configuration list for PBXProject "PaperSwitchDemo" */ = {
 			isa = XCConfigurationList;
