@@ -22,14 +22,15 @@ The [iPhone mockup](https://store.ramotion.com/product/iphone-6-plus-mockups?utm
 - iOS 8.0+
 - Xcode 6.1
 
-
 #Installation
 
 Just add the `RAMPaperSwitch` folder to your project.
 
 or use [CocoaPods](https://cocoapods.org) with Podfile:
 ``` ruby
-pod 'RAMPaperSwitch'
+pod 'RAMPaperSwitch', '~> 1.0.7' swift 2.2
+
+pod 'RAMPaperSwitch', '~> 2.0.0' swift 3
 ```
 or [Carthage](https://github.com/Carthage/Carthage) users can simply add to their `Cartfile`:
 ```
