@@ -24,25 +24,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak private var connectContactsLabel: UILabel!
-    @IBOutlet weak private var phone1ImageView: UIImageView!
-    @IBOutlet weak private var paperSwitch1: RAMPaperSwitch!
+    @IBOutlet weak var connectContactsLabel: UILabel!
+    @IBOutlet weak var phone1ImageView: UIImageView!
+    @IBOutlet weak var paperSwitch1: RAMPaperSwitch!
     
-    @IBOutlet weak private var allowDiscoveryLabel: UILabel!
-    @IBOutlet weak private var phone2ImageView: UIImageView!
-    @IBOutlet weak private var paperSwitch2: RAMPaperSwitch!
-    
+    @IBOutlet weak var allowDiscoveryLabel: UILabel!
+    @IBOutlet weak var phone2ImageView: UIImageView!
+    @IBOutlet weak var paperSwitch2: RAMPaperSwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         self.setupPaperSwitch()
         
-        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = true
     }
-    
-    
-    private func setupPaperSwitch() {
+
+    fileprivate func setupPaperSwitch() {
         
         self.paperSwitch1.animationDidStartClosure = {(onAnimation: Bool) in
             
@@ -57,20 +55,17 @@ class ViewController: UIViewController {
             self.animateImageView(self.phone2ImageView, onAnimation: onAnimation, duration: self.paperSwitch2.duration)
         }
     }
-    
-    
-    private func animateLabel(label: UILabel, onAnimation: Bool, duration: NSTimeInterval) {
-        UIView.transitionWithView(label, duration: duration, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
-            label.textColor = onAnimation ? UIColor.whiteColor() : UIColor(red: 31/255.0, green: 183/255.0, blue: 252/255.0, alpha: 1)
+
+    fileprivate func animateLabel(_ label: UILabel, onAnimation: Bool, duration: TimeInterval) {
+        UIView.transition(with: label, duration: duration, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
+            label.textColor = onAnimation ? UIColor.white : UIColor(red: 31/255.0, green: 183/255.0, blue: 252/255.0, alpha: 1)
             }, completion:nil)
     }
-    
-    
-    private func animateImageView(imageView: UIImageView, onAnimation: Bool, duration: NSTimeInterval) {
-        UIView.transitionWithView(imageView, duration: duration, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+
+    fileprivate func animateImageView(_ imageView: UIImageView, onAnimation: Bool, duration: TimeInterval) {
+        UIView.transition(with: imageView, duration: duration, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
             imageView.image = UIImage(named: onAnimation ? "img_phone_on" : "img_phone_off")
             }, completion:nil)
     }
-    
 }
 
