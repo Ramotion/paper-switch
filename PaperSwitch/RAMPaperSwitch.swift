@@ -100,11 +100,16 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
     }
 
     override open func layoutSubviews() {
-        let x:CGFloat = max(frame.midX, superview!.frame.size.width - frame.midX);
-        let y:CGFloat = max(frame.midY, superview!.frame.size.height - frame.midY);
-        radius = sqrt(x*x + y*y);
+        
+        if let parentView = self.parentView {
+            let x:CGFloat = max(center.x, parentView.frame.size.width - frame.midX)
+            let y:CGFloat = max(center.y, parentView.frame.size.height - frame.midY)
+            radius = sqrt(x*x + y*y)
+        }
+        
+        let additional = parentView == superview ? CGPoint.zero : (superview?.frame.origin ?? CGPoint.zero)
 
-        shape.frame = CGRect(x: frame.midX - radius, y: frame.midY - radius, width: radius * 2, height: radius * 2)
+        shape.frame = CGRect(x: center.x - radius + additional.x - 2, y: center.y - radius + additional.y, width: radius * 2, height: radius * 2)
         shape.anchorPoint = CGPoint(x: 0.5, y: 0.5);
         shape.path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: radius * 2, height: radius * 2)).cgPath
     }
