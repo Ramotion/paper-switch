@@ -29,7 +29,7 @@ Just add the `RAMPaperSwitch` folder to your project.
 
 or use [CocoaPods](https://cocoapods.org) with Podfile:
 ``` ruby
-pod 'RAMPaperSwitch', '~> 2.0.3' 
+pod 'RAMPaperSwitch', '~> 2.0.4' 
 ```
 or [Carthage](https://github.com/Carthage/Carthage) users can simply add to their `Cartfile`:
 ```

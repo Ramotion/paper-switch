@@ -110,7 +110,7 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
         let additional = parentView == superview ? CGPoint.zero : (superview?.frame.origin ?? CGPoint.zero)
 
         shape.frame = CGRect(x: center.x - radius + additional.x - 2, y: center.y - radius + additional.y, width: radius * 2, height: radius * 2)
-        shape.anchorPoint = CGPoint(x: 0.5, y: 0.5);
+        shape.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         shape.path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: radius * 2, height: radius * 2)).cgPath
     }
 
