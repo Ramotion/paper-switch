@@ -45,7 +45,11 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
     fileprivate var oldState             = false
 
     fileprivate var defaultTintColor: UIColor?
-    fileprivate(set) var parentView: UIView?
+    @IBOutlet open var parentView: UIView? {
+        didSet {
+            defaultTintColor = parentView?.backgroundColor
+        }
+    }
 
     // MARK: - Initialization
 
@@ -68,18 +72,17 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
     }
 
     override open func awakeFromNib() {
-        self.commonInit(superview)
+        self.commonInit(parentView ?? superview)
         super.awakeFromNib()
     }
 
     // MARK: Helpers
-
     fileprivate func commonInit(_ parentView: UIView?) {
         guard let onTintColor = self.onTintColor else {
             fatalError("set tint color")
         }
         self.parentView = parentView
-        self.defaultTintColor = parentView?.backgroundColor
+        defaultTintColor = parentView?.backgroundColor
 
         layer.borderWidth  = 0.5
         layer.borderColor  = UIColor.white.cgColor
@@ -107,7 +110,6 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
     }
 
     // MARK: - Public
-
     open override func setOn(_ on: Bool, animated: Bool) {
         let changed:Bool = on != self.isOn
 
@@ -119,7 +121,6 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
     }
 
     // MARK: - Private
-
     fileprivate func showShapeIfNeed() {
         shape.transform = isOn ? CATransform3DMakeScale(1.0, 1.0, 1.0) : CATransform3DMakeScale(0.0001, 0.0001, 0.0001)
     }
@@ -129,7 +130,6 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
     }
 
     // MARK: - Animations 
-
     fileprivate func animateKeyPath(_ keyPath: String, fromValue from: CGFloat?, toValue to: CGFloat, timing timingFunction: String) -> CABasicAnimation {
 
         let animation:CABasicAnimation = CABasicAnimation(keyPath: keyPath)
@@ -173,7 +173,6 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
     }
 
     //MARK: - CAAnimation Delegate
-
     open func animationDidStart(_ anim: CAAnimation) {
         parentView?.backgroundColor = defaultTintColor
         animationDidStartClosure(isOn)
