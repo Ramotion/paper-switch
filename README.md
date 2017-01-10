@@ -17,6 +17,10 @@ We specialize in the designing and coding of custom UI for Mobile Apps and Websi
 
 The [iPhone mockup](https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) available [here](https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
 
+## Try this UI control in action
+
+[![get on iTunes](https://github.com/Ramotion/navigation-stack/raw/master/Download_on_the_App_Store_Badge_US-UK_135x40.png)](https://itunes.apple.com/app/apple-store/id1182360240?pt=550053&ct=gthb-paper-switch&mt=8)
+
 
 ## Requirements
 
