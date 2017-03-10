@@ -18,7 +18,7 @@ We specialize in the designing and coding of custom UI for Mobile Apps and Websi
 #Screenshot
 [![PaperSwitch](https://raw.githubusercontent.com/Ramotion/paper-switch/master/screenshot.gif)](https://dribbble.com/shots/1749645-Contact-Sync)
 
-The [iPhone mockup](https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) available [here](https://store.ramotion.com/product/iphone-6-plus-mockups?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
+The [iPhone mockup](https://store.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) available [here](https://store.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
 
 ## Try this UI control in action
 
