@@ -1,6 +1,6 @@
 [![header](https://raw.githubusercontent.com/Ramotion/paper-switch/master/header.png)](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-logo)
 
-#RAMPaperSwitch
+# RAMPaperSwitch
 
 [![CocoaPods](https://img.shields.io/cocoapods/p/RAMPaperSwitch.svg)](https://cocoapods.org/pods/RAMPaperSwitch)
 [![CocoaPods](https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg)](http://cocoapods.org/pods/RAMPaperSwitch)
@@ -17,7 +17,7 @@ We specialize in the designing and coding of custom UI for Mobile Apps and Websi
 <a href="https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-contact-us/#Get_in_Touch" > <img src="https://github.com/Ramotion/navigation-stack/raw/master/contact_our_team@2x.png" width="150" height="30"></a>
 
 
-#Screenshot
+# Screenshot
 [![PaperSwitch](https://raw.githubusercontent.com/Ramotion/paper-switch/master/screenshot.gif)](https://dribbble.com/shots/1749645-Contact-Sync)
 
 The [iPhone mockup](https://store.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) available [here](https://store.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
@@ -32,7 +32,7 @@ The [iPhone mockup](https://store.ramotion.com?utm_source=gthb&utm_medium=specia
 - iOS 8.0+
 - Xcode 6.1
 
-#Installation
+# Installation
 
 Just add the `RAMPaperSwitch` folder to your project.
 
@@ -46,7 +46,7 @@ github "Ramotion/paper-switch"
 ```
 
 
-#Usage
+# Usage
 RAMPaperSwitch is a drop-in replacement of UISwitch. You just need to set the `onTintColor` property of the switch, and it will automatically _paint over_ its superview with the selected color.
 You have ability to set duration of animation instead of default value.
 
@@ -61,7 +61,7 @@ You have ability to set duration of animation instead of default value.
 5. Add animation for other views near the switch if need.
 
 
-#Animate views
+# Animate views
 You can animate other views near the switch. For example, you can change color to views or labels that are inside the same superview. Duration of animation can be gotten from the RAMPaperSwitch's property `duration`. You can animate CoreAnimation properties like this:
 
 ``` swift
