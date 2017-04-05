@@ -1,6 +1,7 @@
 [![header](https://raw.githubusercontent.com/Ramotion/paper-switch/master/header.png)](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-logo)
 
 #RAMPaperSwitch
+
 [![CocoaPods](https://img.shields.io/cocoapods/p/RAMPaperSwitch.svg)](https://cocoapods.org/pods/RAMPaperSwitch)
 [![CocoaPods](https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg)](http://cocoapods.org/pods/RAMPaperSwitch)
 [![CocoaPods](https://img.shields.io/cocoapods/metrics/doc-percent/RAMPaperSwitch.svg)](https://cdn.rawgit.com/Ramotion/paper-switch/master/docs/index.html)
