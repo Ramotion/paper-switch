@@ -121,7 +121,7 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
         super.setOn(on, animated: animated)
 
         if changed {
-            switchChangeWithAniation(animated)
+            switchChangeWithAnimation(animated)
         }
     }
 
@@ -131,7 +131,7 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
     }
 
     internal func switchChanged() {
-        switchChangeWithAniation(true)
+        switchChangeWithAnimation(true)
     }
 
     // MARK: - Animations 
@@ -151,7 +151,7 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
         return animation
     }
 
-    fileprivate func switchChangeWithAniation(_ animation: Bool) {
+    fileprivate func switchChangeWithAnimation(_ animation: Bool) {
         guard let onTintColor = self.onTintColor else {
             return
         }
