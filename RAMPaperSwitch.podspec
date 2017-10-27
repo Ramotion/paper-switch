@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'RAMPaperSwitch'
-  s.version      = '2.0.4'
+  s.version      = '2.1.0'
   s.summary      = 'Swift subclass of the UISwitch which paints over the parent view'
   s.homepage     = 'https://github.com/Ramotion/paper-switch'
   s.license      = 'MIT'
