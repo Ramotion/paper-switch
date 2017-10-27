@@ -18,7 +18,7 @@ We specialize in the designing and coding of custom UI for Mobile Apps and Websi
 **Looking for developers for your project?**<br>
 This project is maintained by Ramotion, Inc. We specialize in the designing and coding of custom UI for Mobile Apps and Websites.
 
-<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-contact-us/#Get_in_Touch"> 
+<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-contact-us/#Get_in_Touch">
 <img src="https://github.com/ramotion/gliding-collection/raw/master/contact_our_team@2x.png" width="187" height="34"></a> <br>
 
 The [iPhone mockup](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) available [here](https://store.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
@@ -31,7 +31,7 @@ The [iPhone mockup](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_
 ## Requirements
 
 - iOS 8.0+
-- Xcode 6.1
+- Xcode 9.0+
 
 # Installation
 
@@ -39,7 +39,7 @@ Just add the `RAMPaperSwitch` folder to your project.
 
 or use [CocoaPods](https://cocoapods.org) with Podfile:
 ``` ruby
-pod 'RAMPaperSwitch', '~> 2.0.4' 
+pod 'RAMPaperSwitch' 
 ```
 or [Carthage](https://github.com/Carthage/Carthage) users can simply add to their `Cartfile`:
 ```
@@ -78,9 +78,9 @@ self.paperSwitch.animationDidStartClosure = {(onAnimation: Bool) in
 # Get the Showroom App for iOS to give it a try
 Try this UI component and more like this in our iOS app. Contact us if interested.
 
-<a href="https://itunes.apple.com/app/apple-store/id1182360240?pt=550053&ct=paper-switch&mt=8" > 
+<a href="https://itunes.apple.com/app/apple-store/id1182360240?pt=550053&ct=paper-switch&mt=8" >
 <img src="https://github.com/ramotion/gliding-collection/raw/master/app_store@2x.png" width="117" height="34"></a>
-<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-contact-us/#Get_in_Touch"> 
+<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-contact-us/#Get_in_Touch">
 <img src="https://github.com/ramotion/gliding-collection/raw/master/contact_our_team@2x.png" width="187" height="34"></a>
 <br>
 <br>
