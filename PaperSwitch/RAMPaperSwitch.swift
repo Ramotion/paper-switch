@@ -130,7 +130,7 @@ open class RAMPaperSwitch: UISwitch, CAAnimationDelegate {
         shape.transform = isOn ? CATransform3DMakeScale(1.0, 1.0, 1.0) : CATransform3DMakeScale(0.0001, 0.0001, 0.0001)
     }
 
-    internal func switchChanged() {
+    @objc internal func switchChanged() {
         switchChangeWithAnimation(true)
     }
 
