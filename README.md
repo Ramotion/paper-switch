@@ -1,5 +1,6 @@
 [![header](./header.png)](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-logo)
-![PaperSwitch](./screenshot.gif)
+<img src="https://github.com/Ramotion/paper-switch/blob/master/paper-switch.gif" width="600" height="450" />
+<br><br/>
 
 # RAMPaperSwitch
 
