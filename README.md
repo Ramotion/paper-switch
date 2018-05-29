@@ -23,7 +23,7 @@ This project is maintained by Ramotion, Inc. We specialize in the designing and 
 <a href="https://dev.ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch-contact-us">
 <img src="https://github.com/ramotion/gliding-collection/raw/master/contact_our_team@2x.png" width="187" height="34"></a> <br>
 
-The [iPhone mockup](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) available [here](https://store.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
+The [iPhone mockup](https://store.ramotion.com/product/iphone-x-clay-mockups?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) available [here](https://store.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch).
 
 ## Try this UI control in action
 
