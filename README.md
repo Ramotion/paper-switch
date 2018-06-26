@@ -77,6 +77,9 @@ self.paperSwitch.animationDidStartClosure = {(onAnimation: Bool) in
 
 <br>
 
+
+This library is a part of a <a href="https://github.com/Ramotion/swift-ui-animation-components-and-libraries"><b>selection of our best UI open-source projects.</b></a>
+
 # Get the Showroom App for iOS to give it a try
 Try this UI component and more like this in our iOS app. Contact us if interested.
 
