@@ -57,13 +57,13 @@ class ViewController: UIViewController {
     }
 
     fileprivate func animateLabel(_ label: UILabel, onAnimation: Bool, duration: TimeInterval) {
-        UIView.transition(with: label, duration: duration, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
+        UIView.transition(with: label, duration: duration, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
             label.textColor = onAnimation ? UIColor.white : UIColor(red: 31/255.0, green: 183/255.0, blue: 252/255.0, alpha: 1)
             }, completion:nil)
     }
 
     fileprivate func animateImageView(_ imageView: UIImageView, onAnimation: Bool, duration: TimeInterval) {
-        UIView.transition(with: imageView, duration: duration, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
+        UIView.transition(with: imageView, duration: duration, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
             imageView.image = UIImage(named: onAnimation ? "img_phone_on" : "img_phone_off")
             }, completion:nil)
     }
