@@ -70,7 +70,7 @@ You can animate other views near the switch. For example, you can change color t
 
 ``` swift
 self.paperSwitch.animationDidStartClosure = {(onAnimation: Bool) in
-    UIView.transitionWithView(self.label, duration: self.paperSwitch.duration, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+    UIView.transitionWithView(self.label, duration: self.paperSwitch.duration, options: UIView.AnimationOptions.TransitionCrossDissolve, animations: {
         self.label.textColor = onAnimation ? UIColor.whiteColor() : UIColor.blueColor()
     }, completion:nil)
 }
