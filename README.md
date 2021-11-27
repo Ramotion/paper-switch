@@ -59,7 +59,7 @@ You have ability to set duration of animation instead of default value.
 
 3. Set `onTintColor` for the switch
 
-4. Set `duration` property programmatically if You want to change animation duration.
+4. Set `duration` property programmatically if you want to change animation duration.
 
 5. Add animation for other views near the switch if need.
 
